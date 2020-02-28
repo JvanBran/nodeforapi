@@ -40,7 +40,9 @@ class BabyUser{
     }
     find(dataArr={}) {
         const self = this;
+        console.log('====','')
         return new Promise(function (resolve, reject){
+            
             self.babyUser.find(dataArr, function(e, docs) {
                 if(e){
                     console.log('e:',e);

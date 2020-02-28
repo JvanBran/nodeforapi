@@ -1,5 +1,5 @@
-import {babyUser} from '../modal/babyUser'
-import {resdata, errdata} from '../../utils/serve'
+import { babyUser } from '../modal/babyUser'
+import { resdata, errdata } from '../../utils/serve'
 
 exports.getUserList = async (ctx, next) => {
     try {
