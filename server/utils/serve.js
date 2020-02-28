@@ -16,7 +16,7 @@ exports.errdata=function (err, code, msg) {
 	let respon={
 		'code': _code,
 		'message': _msg,
-		'result':data
+		'result':err
 	}
 	return respon;
 };

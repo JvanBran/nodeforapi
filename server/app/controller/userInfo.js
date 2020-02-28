@@ -39,7 +39,7 @@ exports.findUser = async(reqBody) => {
         let list = await userInfo.find(dataArr);
         let respon = {};
         if(list && list.length > 0) {
-            const token = jwt.sign({
+            const tokenObj = {
                 username:list[0].username, //用户名
                 phone:list[0].phone,   //手机号
                 sex: list[0].sex,    //性别
@@ -47,7 +47,8 @@ exports.findUser = async(reqBody) => {
                 email:list[0].email,   //邮箱
                 type:list[0].type, //用户
                 _id: list[0]._id
-            }, 'test_token', { expiresIn: '2h' });
+            }
+            const token = jwt.sign(tokenObj, 'test_token', { expiresIn: '0.002h' });
             respon = resdata('0000', '登录成功',{'token':token});
         }else {
             respon = resdata('9999', '用户不存在', {});

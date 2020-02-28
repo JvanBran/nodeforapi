@@ -1,0 +1,479 @@
+[2020-02-28T20:34:12.749] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 61
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4OTMyNTIsImV4cCI6MTU4MjkwMDQ1Mn0.QWcUw8za16guQpL3XRwQ84Ku0ZfO0vtDxuhTWq2ZoFs"}}
+*************** response log end ***************
+
+[2020-02-28T20:34:15.857] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 9
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4OTMyNTUsImV4cCI6MTU4MjkwMDQ1NX0.cZOU_XWhB8U4qk-4hB4Ckg8NfcPAkCUWwWCOXsFuFpk"}}
+*************** response log end ***************
+
+[2020-02-28T20:36:44.905] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 5
+response status: 200
+response body: 
+{"code":"9999","message":"还没有登录!","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:36:53.003] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 0
+response status: 200
+response body: 
+{"code":"9999","message":"还没有登录!","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:38:45.118] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 55
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4OTM1MjUsImV4cCI6MTU4MjkwMDcyNX0.eSXuc0o6i5_sr6H8Uk5p9AnsTu2Osu7cQtD8d8kI86s"}}
+*************** response log end ***************
+
+[2020-02-28T20:38:52.036] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 35
+response status: 200
+response body: 
+{"code":"9999","message":"鉴权失败5","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:39:32.534] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 49
+response status: 200
+response body: 
+{"code":"9999","message":"鉴权失败5","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:39:56.773] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 51
+response status: 200
+response body: 
+{"code":"9999","message":"鉴权失败5","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:40:15.347] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 6
+response status: 200
+response body: 
+{"code":"9999","message":"鉴权失败5","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:41:19.417] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 9
+response status: 200
+response body: 
+{"code":"9999","message":"鉴权失败5","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:41:20.647] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 1
+response status: 200
+response body: 
+{"code":"9999","message":"鉴权失败5","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:42:05.684] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 8
+response status: 200
+response body: 
+{"code":"9999","message":"未经授权","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:42:24.672] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+{"code":"9999","message":"token错误","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:42:31.122] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 0
+response status: 200
+response body: 
+{"code":"9999","message":"未经授权","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:42:38.649] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 65
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4OTM3NTgsImV4cCI6MTU4MjkwMDk1OH0.IlyovZvy_wzoViW4v2GpEG_h3bacxbK3pJv2vXSFzHE"}}
+*************** response log end ***************
+
+[2020-02-28T20:42:58.598] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+{"code":"9999","message":"token错误","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:43:04.399] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 29
+response status: 200
+response body: 
+{"code":"9999","message":"未经授权","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:47:02.528] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 66
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4OTQwMjIsImV4cCI6MTU4Mjg5NDA5NH0.Pdxd71GSLn3pLTUgFDpKoPlcpAGB7L9FJYEC8-PCPjc"}}
+*************** response log end ***************
+
+[2020-02-28T20:47:03.664] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 9
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4OTQwMjMsImV4cCI6MTU4Mjg5NDA5NX0.jtX8jjp2XSxuES0dStmrFkM7x_kQH7YXYQJ4e1Z7Lz4"}}
+*************** response log end ***************
+
+[2020-02-28T20:47:14.353] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 12
+response status: 404
+response body: 
+{"code":"9999","message":"找不到页面","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:47:17.416] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 7
+response status: 404
+response body: 
+{"code":"9999","message":"找不到页面","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:47:38.744] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 41
+response status: 404
+response body: 
+{"code":"9999","message":"找不到页面","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:48:04.684] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 69
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T20:48:20.605] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 55
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4OTQxMDAsImV4cCI6MTU4Mjg5NDEwN30.XWjHrZdrCeR9UGQ8Tlx6pDUD5TmTcvwbJu01SiBnvls"}}
+*************** response log end ***************
+
+[2020-02-28T20:48:33.336] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 3
+response status: 200
+response body: 
+{"code":"9999","message":"token错误","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:49:56.258] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 9
+response status: 200
+response body: 
+{"code":"9999","message":"token错误","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:50:16.070] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 10
+response status: 200
+response body: 
+{"code":"9999","message":"token过期","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:50:23.454] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+{"code":"9999","message":"token错误","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:51:09.534] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 3
+response status: 200
+response body: 
+{"code":"9999","message":"token不完整","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:51:16.819] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+{"code":"9999","message":"token不完整","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:53:41.651] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 108
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4OTQ0MjEsImV4cCI6MTU4Mjg5NDQyOH0.PY9x3c-B5EIhtJR4_IoQVl3RQpOUjh7PzS5GwZ0ZE_o"}}
+*************** response log end ***************
+
+[2020-02-28T20:53:50.899] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 4
+response status: 200
+response body: 
+{"code":"9999","message":"token过期","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:54:06.233] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 2
+response status: 404
+response body: 
+undefined
+*************** response log end ***************
+
+[2020-02-28T20:54:44.973] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 56
+response status: 200
+response body: 
+{"code":"9999","message":"未经授权","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:55:14.031] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 43
+response status: 200
+response body: 
+{"code":"9999","message":"未经授权","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:55:37.514] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 7
+response status: 200
+response body: 
+{"code":"9999","message":"未经授权","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:56:20.608] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 25
+response status: 200
+response body: 
+{"code":"9999","message":"缺少token","result":null}
+*************** response log end ***************
+
+[2020-02-28T20:56:22.469] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 1
+response status: 200
+response body: 
+{"code":"9999","message":"缺少token","result":null}
+*************** response log end ***************
+

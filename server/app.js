@@ -10,10 +10,14 @@ const logger = require('koa-logger')
 
 
 const loggers = require('./middleware/loggers')
+const koaJwtVerify = require('./middleware/koajwtVerify')
 
 const router = require('./routes/index')
 
 const db = require('./config/dbConfig')
+const serverConfig = require('./config/serverConfig.js'); 
+
+
 
 // error handler
 onerror(app)
@@ -25,12 +29,9 @@ app.use(convert.compose(
 ))
 
 // middlewares
+app.use(convert(loggers()));// 本地log
+app.use(koaJwtVerify());
 app.use(convert(require('koa-static')(__dirname + '/public')));
-
-// 本地log
-app.use(convert(loggers()));
-
-
 
 app.use(views(__dirname + '/views', {
   extension: 'pug'
@@ -45,9 +46,10 @@ app.use(async (ctx, next) => {
 })
 
 app.use(koajwt({
-  secret: 'test_token'
+  secret: serverConfig.jwt_token
 }).unless({
-  path: [/^\/login/]
+  // '/^\/login/',
+  path: ['/login/signIn']
 }));
 
 // routes

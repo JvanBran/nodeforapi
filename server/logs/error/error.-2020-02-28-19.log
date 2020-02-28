@@ -1,0 +1,548 @@
+[2020-02-28T19:36:58.789] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 41
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:68:26)
+*************** error log end ***************
+
+[2020-02-28T19:40:04.823] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 40
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:68:26)
+*************** error log end ***************
+
+[2020-02-28T19:44:38.673] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 43
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:44:38.737] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /robots.txt
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 103
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:44:39.526] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /favicon.ico
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 2
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:44:49.583] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 99
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:44:50.221] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /favicon.ico
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 37
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:45:05.660] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 58
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:45:06.258] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /favicon.ico
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 2
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:45:17.834] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 67
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:45:18.054] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /favicon.ico
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 40
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:45:19.638] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 2
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:45:19.881] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /favicon.ico
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:45:52.748] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 28
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:68:26)
+*************** error log end ***************
+
+[2020-02-28T19:45:56.805] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 4
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:45:57.086] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /favicon.ico
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 37
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:46:02.202] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 72
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:46:02.605] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /favicon.ico
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:48:9
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:3:99
+    at app.use (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/app.js:46:1)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at views (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-views/src/index.js:60:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-static/index.js:53:15)
+*************** error log end ***************
+
+[2020-02-28T19:50:28.103] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 32
+err name: ReferenceError
+err message: data is not defined
+err stack: ReferenceError: data is not defined
+    at exports.errdata (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/utils/serve.js:19:12)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/middleware/koajwtVerify.js:22:32
+    at Generator.next (<anonymous>)
+    at step (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/middleware/koajwtVerify.js:5:191)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/middleware/koajwtVerify.js:5:437
+    at new Promise (<anonymous>)
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/middleware/koajwtVerify.js:5:99
+    at /Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/middleware/koajwtVerify.js:8:5
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-compose/index.js:45:18)
+    at logger (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-logger/index.js:67:13)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-compose/index.js:45:18)
+    at filter (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-json/index.js:25:12)
+    at dispatch (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-compose/index.js:45:18)
+    at bodyParser (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-bodyparser/index.js:86:11)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+*************** error log end ***************
+
+[2020-02-28T19:52:09.405] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 42
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:68:26)
+*************** error log end ***************
+
+[2020-02-28T19:52:27.894] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 36
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:68:26)
+*************** error log end ***************
+
+[2020-02-28T19:52:45.076] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 89
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:68:26)
+*************** error log end ***************
+
+[2020-02-28T19:52:52.113] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 36
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:68:26)
+*************** error log end ***************
+
+[2020-02-28T19:53:18.455] [ERROR] error - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 86
+err name: UnauthorizedError
+err message: Authentication Error
+err stack: UnauthorizedError: Authentication Error
+    at Object.throw (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/jvan/Documents/Jvan/Node/Koa/adminForApi/server/node_modules/koa-jwt/lib/index.js:68:26)
+*************** error log end ***************
+
