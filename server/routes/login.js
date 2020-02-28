@@ -1,5 +1,5 @@
 const router = require('koa-router')()
-import {creatUser} from '../app/controller/userInfo'
+import { creatUser,findUser } from '../app/controller/userInfo'
 
 router.get('/', function (ctx, next) {
   ctx.body = 'this a users response!';

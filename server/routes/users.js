@@ -1,31 +1,11 @@
-const router = require('koa-router')()
-import {getUserList, register, removeUser, findUser, updateUser} from '../app/controller/user'
+const router = require('koa-router')();
+const jwt = require('jsonwebtoken');
+import { getUserList } from '../app/controller/userInfo'
 
-router.get('/', function (ctx, next) {
-  ctx.body = 'this a users response!';
-});
 router.get('/getUser', async (ctx, next) => {
+  let payload = await jwt.verify(ctx.header.authorization.split(' ')[1], 'test_token');
+  console.log('payload: ', payload);
+  
   ctx.body = await getUserList(ctx, next);
 });
-router.post('/findUser', async (ctx, next) => {
-  console.log(ctx.request.body);
-  let reqBody = ctx.request.body;
-  ctx.body = await findUser(reqBody);
-});
-router.post('/register', async (ctx, next) => {
-  console.log(ctx.request.body)
-  let reqBody = ctx.request.body;
-  ctx.body = await register(reqBody);
-});
-router.post('/updateUser', async (ctx, next) => {
-  console.log(ctx.request.body);
-  let reqBody = ctx.request.body;
-  ctx.body = await updateUser(reqBody);
-});
-router.del('/removeUser', async (ctx, next) => {
-  console.log(ctx.request.body);
-  let reqBody = ctx.request.body;
-  ctx.body = await removeUser(reqBody);
-});
-
-module.exports = router
+module.exports = router;

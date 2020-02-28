@@ -3,6 +3,7 @@ const app = new Koa()
 const views = require('koa-views')
 const convert = require('koa-convert')
 const json = require('koa-json')
+const koajwt = require('koa-jwt')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
@@ -42,6 +43,12 @@ app.use(async (ctx, next) => {
   const ms = new Date() - start
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
+
+app.use(koajwt({
+  secret: 'test_token'
+}).unless({
+  path: [/^\/login/]
+}));
 
 // routes
 app.use(router.routes(), router.allowedMethods());

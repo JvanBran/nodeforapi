@@ -1,0 +1,91 @@
+[2020-02-28T14:30:44.140] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 34
+response status: 200
+response body: 
+{"respHead":{"code":"9999","message":"用户不存在"},"respBody":{}}
+*************** response log end ***************
+
+[2020-02-28T14:32:27.801] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/register
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211","phone":"121212","sex":"1","imgUrl":"121212","email":"121212"}
+response time: 41
+response status: 200
+response body: 
+{"respHead":{"code":"0000","message":"success"},"respBody":{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}}
+*************** response log end ***************
+
+[2020-02-28T14:32:32.481] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 12
+response status: 200
+response body: 
+{"respHead":{"code":"0000","message":"登录成功"},"respBody":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T14:54:49.135] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 19
+response status: 200
+response body: 
+{"respHead":{"code":"0000","message":"登录成功"},"respBody":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T14:56:36.526] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 43
+response status: 200
+response body: 
+{"respHead":{"code":"0000","message":"登录成功"},"respBody":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T14:59:15.718] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 74
+response status: 200
+response body: 
+{"respHead":{"code":"0000","message":"登录成功"},"respBody":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T14:59:34.712] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 64
+response status: 200
+response body: 
+{"respHead":{"code":"0000","message":"登录成功"},"respBody":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzMxNzQsImV4cCI6MTU4Mjg4MDM3NH0.B1qUkHjg66MBH5ZcilocjQFeHGemJHmcr_OnJGHEk54"}
+*************** response log end ***************
+

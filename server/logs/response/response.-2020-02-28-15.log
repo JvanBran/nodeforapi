@@ -1,0 +1,552 @@
+[2020-02-28T15:03:32.081] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 61
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0MTIsImV4cCI6MTU4Mjg4MDYxMn0.J0IIaQame_dWrqbajJxv1FdlQsfIV2OfqB9GmPwNiSc"}
+*************** response log end ***************
+
+[2020-02-28T15:04:01.755] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 48
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NDEsImV4cCI6MTU4Mjg4MDY0MX0.7ZHYNp_KVaEp4i1TvEP8KZm48eJg1ls7ka0Zxcj0sN8"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:23.621] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 12
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NjMsImV4cCI6MTU4Mjg4MDY2M30.cPa07ZOM7vX3zifm47Vut2OBI0AuxTS2DfAVuvSHirM"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:24.850] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 6
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NjQsImV4cCI6MTU4Mjg4MDY2NH0.1SjFfEmXMUXgs_mGq9kNpLXzVu6UiTrbDhQZO08AsFE"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:25.633] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 6
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NjUsImV4cCI6MTU4Mjg4MDY2NX0.qu1hA306ToGqUBrLlh1x4cY28Gi-3V1QVyYv83K3o-M"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:26.398] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 5
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NjYsImV4cCI6MTU4Mjg4MDY2Nn0.UBcdjpf7LcytA09qT61x8X37cGxC8XZwfrAN6BNlOn0"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:27.151] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 4
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NjcsImV4cCI6MTU4Mjg4MDY2N30._I-LQSo6xdjanCbKUGcyMQnWJztCNPDO7M-mCFZx5r4"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:27.911] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 4
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NjcsImV4cCI6MTU4Mjg4MDY2N30._I-LQSo6xdjanCbKUGcyMQnWJztCNPDO7M-mCFZx5r4"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:28.738] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 3
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NjgsImV4cCI6MTU4Mjg4MDY2OH0.xZedHwOq6KjMdHZFapPV1rVU7PPlFBZQsMMioveIpvY"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:29.437] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 3
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NjksImV4cCI6MTU4Mjg4MDY2OX0.8bjXu9GNx_TKLVDbljTPbHCbxaha9_DZu8CVNcoydP8"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:30.160] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 3
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NzAsImV4cCI6MTU4Mjg4MDY3MH0.LRB281aUiL1HCW2n5LkGd5pW5dFsAUz-ZeNeh5H_dhs"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:30.957] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 8
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NzAsImV4cCI6MTU4Mjg4MDY3MH0.LRB281aUiL1HCW2n5LkGd5pW5dFsAUz-ZeNeh5H_dhs"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:31.672] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 5
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NzEsImV4cCI6MTU4Mjg4MDY3MX0.RZr2PuSwbKTaQCG8OkiA4lEo_vKujFKqTlWlElNx6Ss"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:32.461] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 4
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NzIsImV4cCI6MTU4Mjg4MDY3Mn0.osn6CAZ9qoo8lcXl_RIJrQlEElDUgw2OvSjoLIxR1i0"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:33.273] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 4
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NzMsImV4cCI6MTU4Mjg4MDY3M30.5Jcn8dP40CvBP5fEmBDhP7v3HxTC_BD7QmKQ5xGwpBA"}}
+*************** response log end ***************
+
+[2020-02-28T15:04:34.113] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 6
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzM0NzQsImV4cCI6MTU4Mjg4MDY3NH0.PAfd_MTEceYEoPI9de9ba9lq2fmI9HIBhP_cYPCxXPI"}}
+*************** response log end ***************
+
+[2020-02-28T15:11:07.536] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 46
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:12:15.347] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 91
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:19:19.345] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 107
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzQzNTksImV4cCI6MTU4Mjg4MTU1OX0.VNTk3YbZmFynVYqXm5OH78DJeKb_0RrxH3V-kQ2FliM"}}
+*************** response log end ***************
+
+[2020-02-28T15:21:30.493] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 149
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:22:05.411] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 249
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:27:54.904] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 91
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:28:58.629] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 43
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:13.442] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 23
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:16.641] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 11
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzU0MzYsImV4cCI6MTU4Mjg4MjYzNn0.9loCr5ELz7pkXiVdLleasTcjNh_x1agMDQYrZwISXbk"}}
+*************** response log end ***************
+
+[2020-02-28T15:37:18.087] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 13
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:19.449] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 7
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:20.210] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 4
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:21.015] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 3
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:23.861] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 4
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzU0NDMsImV4cCI6MTU4Mjg4MjY0M30.qMasR-JuC9XXxokJWJftFeBp-Oj0yuTVNLxPIIlzk4A"}}
+*************** response log end ***************
+
+[2020-02-28T15:37:24.801] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 4
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzU0NDQsImV4cCI6MTU4Mjg4MjY0NH0.rSbLA_M19DbBy0PgFmSmzbr1fgwL7HTg-kYayNuN13s"}}
+*************** response log end ***************
+
+[2020-02-28T15:37:25.660] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 8
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzU0NDUsImV4cCI6MTU4Mjg4MjY0NX0.tifQZYOWaovQQBSQN0iE7_UsijF6qiV-TnzDzc1lb3g"}}
+*************** response log end ***************
+
+[2020-02-28T15:37:26.457] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 5
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzU0NDYsImV4cCI6MTU4Mjg4MjY0Nn0.shvyuAYdrcW2u635uh4XieSEa_eKkhXHnwDfPTkW9to"}}
+*************** response log end ***************
+
+[2020-02-28T15:37:27.110] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 3
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzU0NDcsImV4cCI6MTU4Mjg4MjY0N30.4HDaEoNYh-cTc2pZl-jO3a1bhnQcm1berpMa3GcfZ60"}}
+*************** response log end ***************
+
+[2020-02-28T15:37:28.004] [INFO] response - 
+*************** response log start ***************
+request method: POST
+request originalUrl:  /login/signIn
+request client ip:  ::ffff:127.0.0.1
+request body: 
+{"username":"1212121211","password":"1212121211"}
+response time: 4
+response status: 200
+response body: 
+{"code":"0000","message":"登录成功","result":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMTIxMjEyMTEiLCJwaG9uZSI6IjEyMTIxMiIsInNleCI6MSwiaW1nVXJsIjoiMTIxMjEyIiwiZW1haWwiOiIxMjEyMTIiLCJ0eXBlIjoxLCJfaWQiOiI1ZTU4YjNmYmNlYmI0ZTIzMmU5YmQ2OTAiLCJpYXQiOjE1ODI4NzU0NDgsImV4cCI6MTU4Mjg4MjY0OH0.zMUHMJStgSTllXmIOmscGVFOTiY7JIqxMSFYqe8VTnE"}}
+*************** response log end ***************
+
+[2020-02-28T15:37:29.921] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 5
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:30.673] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 5
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:31.338] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 3
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:31.933] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 3
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:32.524] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 5
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:33.102] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 8
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:33.497] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 3
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:33.994] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 5
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+
+[2020-02-28T15:37:34.392] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users/getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 3
+response status: 200
+response body: 
+{"code":"0000","message":"success","result":[{"_id":"5e58b3fbcebb4e232e9bd690","username":"1212121211","phone":"121212","password":"1212121211","sex":1,"imgUrl":"121212","email":"121212","type":1,"updateTime":"2020-02-28T06:32:27.786Z","createTime":"2020-02-28T06:32:27.786Z","__v":0}]}
+*************** response log end ***************
+

@@ -9,7 +9,6 @@ let userInfoSchema = new Schema({
     email:String,   //邮箱
     type:Number,    //用户类型 0超级管理1普通用户
     remark:String,  //描述
-    token:String,   //令牌
 	createTime:{    //创建时间
         type: Date,
         dafault: Date.now()
@@ -59,6 +58,32 @@ class UserInfo{
             });
             user.save(function(e, data, numberAffected) {
                 // if (e) response.send(e.message);
+                if(e){
+                    reject(e);
+                }else{
+                    resolve(data);
+                }
+            });
+        })
+    }
+    update(option={}, dataArr={}){
+        const self = this;
+        return new Promise(function (resolve, reject){
+            self.userInfo.update(option, dataArr,function(e, data) {
+                if(e){
+                    reject(e);
+                }else{
+                    resolve(data);
+                }
+            });
+        })
+    }
+    delete(dataArr) {
+        const self = this;
+        return new Promise(function (resolve, reject){
+            self.userInfo.remove({
+                _id: dataArr.id
+            }, function(e, data) {
                 if(e){
                     reject(e);
                 }else{
