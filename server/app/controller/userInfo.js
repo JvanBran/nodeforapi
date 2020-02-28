@@ -48,7 +48,7 @@ exports.findUser = async(reqBody) => {
                 type:list[0].type, //用户
                 _id: list[0]._id
             }
-            const token = jwt.sign(tokenObj, 'test_token', { expiresIn: '0.002h' });
+            const token = jwt.sign(tokenObj, 'test_token', { expiresIn: '2h' });
             respon = resdata('0000', '登录成功',{'token':token});
         }else {
             respon = resdata('9999', '用户不存在', {});

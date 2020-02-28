@@ -13,7 +13,6 @@ const koaJwtVerify = () => {
                         if(payload){
                             ctx.state.user = payload
                         }else{
-                            console.log('token verify fail1',error);
                             ctx.status = 200
                             ctx.body = errdata(null,'9999', '鉴权失败1')
                             return
@@ -26,10 +25,8 @@ const koaJwtVerify = () => {
                     }
                     
                 } catch (error) {
-                    console.log('error',error.name)
                     if(error.name == 'TokenExpiredError'){
                         ctx.status = 200
-                        //ctx.res.setHeader('Authorization', newToken);
                         ctx.body = errdata(null,'9999', 'token过期')
                     }else{
                         ctx.status = 200
@@ -40,10 +37,9 @@ const koaJwtVerify = () => {
             }
             await next()
         } catch (error) {
-            // console.log(error)
             if(error.status === 401){
                 ctx.status = 200
-                ctx.body = errdata(null,'9999', '缺少token')
+                ctx.body = errdata(null,'9999', '请重新登录')
             }else{
                 ctx.status = 404
                 ctx.body = errdata(null,'9999', '找不到页面')
