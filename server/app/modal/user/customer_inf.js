@@ -3,7 +3,7 @@ let mongoose = require("mongoose");
 require('mongoose-double')(mongoose);
 
 let Schema = mongoose.Schema;
-let customer_inf_Schema = new Schema({
+let customerInfSchema = new Schema({
     customer_inf_id: Schema.Types.ObjectId, //自增主键ID
     customer_id:Number, //customer_login表的自增ID
     customer_name:String,   //用户真实姓名
@@ -16,10 +16,6 @@ let customer_inf_Schema = new Schema({
     customer_email:String,  //邮箱
     gender:Number,  //性别
     user_point:Number,  //用户积分
-    register_time:{
-        type: Date,
-        dafault: Date.now()
-    },  //注册时间
     birthday:{
         type: Date,
         dafault: Date.now()
@@ -31,7 +27,7 @@ let customer_inf_Schema = new Schema({
     user_money:{
         type:mongoose.Schema.Types.Double,
         default:0.00
-    }, //DECIMAL(8,2) NOT NULL DEFAULT 0.00 COMMENT '用户余额',
+    }, //用户余额
 	createTime:{    //创建时间
         type: Date,
         dafault: Date.now()
@@ -41,3 +37,20 @@ let customer_inf_Schema = new Schema({
         dafault: Date.now()
     },
 })
+customerInfSchema.pre('save', function(next) {
+    if (this.isNew) {
+      this.createTime = this.updateTime = Date.now()
+    }
+    else {
+      this.updateTime = Date.now()
+    }
+    next()
+})
+class CustomerInf{
+    constructor(){
+        this.customer_inf = mongoose.model("customer_inf", customerInfSchema);
+    }
+}
+
+let customerInf = new CustomerInf()
+export {customerInf}
