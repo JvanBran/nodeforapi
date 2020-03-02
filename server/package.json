@@ -9,6 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "datalize": "^0.3.4",
     "debug": "^4.1.1",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.7.0",
@@ -23,6 +24,7 @@
     "koa-views": "^6.2.0",
     "log4js": "^6.1.2",
     "mongoose": "^5.9.2",
+    "mongoose-double": "^0.0.1",
     "pug": "^2.0.3",
     "runkoa": "^1.5.9"
   },

@@ -10,7 +10,8 @@ const logger = require('koa-logger')
 
 
 const loggers = require('./middleware/loggers')
-const koaJwtVerify = require('./middleware/koajwtVerify')
+const jwtVerify = require('./middleware/jwtVerify')
+const datalizeVerify = require('./middleware/datalizeVerify')
 
 const router = require('./routes/index')
 
@@ -30,7 +31,8 @@ app.use(convert.compose(
 
 // middlewares
 app.use(convert(loggers()));// 本地log
-app.use(koaJwtVerify());
+app.use(convert(jwtVerify())); //jwt校验
+app.use(convert(datalizeVerify())) //表单校验
 app.use(convert(require('koa-static')(__dirname + '/public')));
 
 app.use(views(__dirname + '/views', {

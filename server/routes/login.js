@@ -1,11 +1,17 @@
 const router = require('koa-router')()
 import { creatUser,findUser } from '../app/controller/userInfo'
+const datalize = require('datalize');
+const field = datalize.field;
 
 router.get('/', function (ctx, next) {
   ctx.body = 'this a users response!';
 });
 //登录
-router.post('/signIn', async (ctx, next) => {
+router.post('/signIn',datalize([
+  field('username').required(),
+  field('password').required(),
+]), async (ctx, next) => {
+  console.log(ctx.form)
   let reqBody = ctx.request.body;
   ctx.body = await findUser(reqBody);
 });
