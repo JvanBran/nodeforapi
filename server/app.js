@@ -19,6 +19,11 @@ const db = require('./config/dbConfig')
 const serverConfig = require('./config/serverConfig.js'); 
 
 
+const testModal = require('./app/modal/user')
+console.log(testModal.customerInf.test())
+// testModal()
+
+
 
 // error handler
 onerror(app)

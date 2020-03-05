@@ -1,14 +1,15 @@
 //用户地址表
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
-let customerLoginSchema = new Schema({
-    customer_id: Schema.Types.ObjectId, //用户ID
-    login_name:String,   //用户登录名
-	password: String,   //md5加密的密码
-    user_stats: {
-        type:Number,
-        default:1
-    },//用户状态
+let customerAddrSchema = new Schema({
+    customer_addr_id: Schema.Types.ObjectId, //自增主键ID
+    customer_id:String,   //customer_login表的自增ID
+    zip: String,   //邮编
+    province: String, //地区表中省份的ID
+    city: String,// 地区表中城市的ID
+    district: String, // 地区表中的区ID
+    address: String,// 具体的地址门牌号
+    is_default: Number,// 是否默认
 	createTime:{    //创建时间
         type: Date,
         dafault: Date.now()
@@ -18,7 +19,7 @@ let customerLoginSchema = new Schema({
         dafault: Date.now()
     },
 })
-customerLoginSchema.pre('save', function(next) {
+customerAddrSchema.pre('save', function(next) {
     if (this.isNew) {
       this.createTime = this.updateTime = Date.now()
     }
@@ -27,11 +28,11 @@ customerLoginSchema.pre('save', function(next) {
     }
     next()
 })
-class CustomerLogin{
+class CustomerAddr{
     constructor(){
-        this.customer_login = mongoose.model("customer_login", customerLoginSchema);
+        this.customer_addr = mongoose.model("customer_addr", customerAddrSchema);
     }
 }
 
-let customerLogin = new CustomerLogin()
-export {customerLogin}
+let customerAddr = new CustomerAddr()
+export {customerAddr}
