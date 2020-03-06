@@ -12,7 +12,7 @@ const jwtVerify = () => {
                     payload = await jwt.verify(ctx.header.authorization.split(' ')[1], serverConfig.jwt_token);
                     try {
                         if(payload){
-                            ctx.state.user = payload
+                            ctx.state.JwtToken = payload
                         }else{
                             ctx.status = 200
                             ctx.body = errdata({},'9999', '请重新登录！')

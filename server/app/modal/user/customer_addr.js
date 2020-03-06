@@ -1,8 +1,8 @@
 //用户地址表
 let mongoose = require("mongoose");
+import {AuxiliaryClass} from '../util';
 let Schema = mongoose.Schema;
 let customerAddrSchema = new Schema({
-    customer_addr_id: Schema.Types.ObjectId, //自增主键ID
     customer_id:String,   //customer_login表的自增ID
     zip: String,   //邮编
     province: String, //地区表中省份的ID
@@ -28,9 +28,32 @@ customerAddrSchema.pre('save', function(next) {
     }
     next()
 })
-class CustomerAddr{
+class CustomerAddr extends AuxiliaryClass{
     constructor(){
-        this.customer_addr = mongoose.model("customer_addr", customerAddrSchema);
+        super()
+        this.mongooseModel = mongoose.model("customer_addr", customerAddrSchema);
+    }
+    create(dataArr) {
+        const self = this;
+        return new Promise(function (resolve, reject){
+            let user = new self.mongooseModel({
+                customer_id:dataArr.customer_id,
+				zip: dataArr.zip,
+                province: dataArr.province,
+                city: dataArr.city,
+                district: dataArr.district,
+                address: dataArr.address,
+                is_default: dataArr.is_default
+            });
+            user.save(function(e, data, numberAffected) {
+                // if (e) response.send(e.message);
+                if(e){
+                    reject(e);
+                }else{
+                    resolve(data);
+                }
+            });
+        })
     }
 }
 

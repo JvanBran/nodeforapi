@@ -18,13 +18,6 @@ const router = require('./routes/index')
 const db = require('./config/dbConfig')
 const serverConfig = require('./config/serverConfig.js'); 
 
-
-const testModal = require('./app/modal/user')
-console.log(testModal.customerInf.test())
-// testModal()
-
-
-
 // error handler
 onerror(app)
 
@@ -55,7 +48,7 @@ app.use(async (ctx, next) => {
 app.use(koajwt({
   secret: serverConfig.jwt_token
 }).unless({
-  path: ['/login/signIn','/login/register','/login/retrieve']
+  path: ['/login/signin','/login/register']
 }));
 
 // routes

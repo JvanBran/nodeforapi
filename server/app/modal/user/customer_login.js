@@ -1,8 +1,8 @@
 //用户登录表
 let mongoose = require("mongoose");
+import {AuxiliaryClass} from '../util';
 let Schema = mongoose.Schema;
 let customerLoginSchema = new Schema({
-    customer_id: Schema.Types.ObjectId, //用户ID
     login_name:String,   //用户登录名
 	password: String,   //md5加密的密码
     user_stats: {
@@ -27,11 +27,28 @@ customerLoginSchema.pre('save', function(next) {
     }
     next()
 })
-class CustomerLogin{
+class CustomerLogin extends AuxiliaryClass{
     constructor(){
-        this.customer_login = mongoose.model("customer_login", customerLoginSchema);
+        super()
+        this.mongooseModel = mongoose.model("customer_login", customerLoginSchema);
+    }
+    create(dataArr) {
+        const self = this;
+        return new Promise(function (resolve, reject){
+            let user = new self.mongooseModel({
+				login_name: dataArr.customer_name,
+                password: dataArr.password,
+            });
+            user.save(function(e, data, numberAffected) {
+                // if (e) response.send(e.message);
+                if(e){
+                    reject(e);
+                }else{
+                    resolve(data);
+                }
+            });
+        })
     }
 }
-
 let customerLogin = new CustomerLogin()
 export {customerLogin}

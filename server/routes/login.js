@@ -1,28 +1,27 @@
 const router = require('koa-router')()
-import { creatUser,findUser } from '../app/controller/userInfo'
+import { creatUser,findUser } from '../app/controller/user/customer_inf'
 const datalize = require('datalize');
 const field = datalize.field;
 
-router.get('/', function (ctx, next) {
-  ctx.body = 'this a users response!';
-});
-//登录
-router.post('/signIn',datalize([
-  field('username').required(),
-  field('password').required(),
-]), async (ctx, next) => {
-  console.log(ctx.form)
-  let reqBody = ctx.request.body;
-  ctx.body = await findUser(reqBody);
-});
 //注册
-router.post('/register', async (ctx, next) => {
+router.post('/register',datalize([
+  field('login_name').required(), //登录名
+  field('password').required(), //密码
+  field('customer_email').email(), //邮箱 
+  field('mobile_phone').required().phone(), //手机号码
+]), async (ctx, next) => {
   let reqBody = ctx.request.body;
   ctx.body = await creatUser(reqBody);
 });
-//找回密码
-router.post('/retrieve', async (ctx, next) => {
-    let reqBody = ctx.request.body;
-    ctx.body = await register(reqBody);
+//登录
+router.post('/signin',datalize([
+  field('login_name').required(), //登录名
+  field('password').required(), //密码
+]), async (ctx, next) => {
+  let reqBody = ctx.request.body;
+  ctx.body = await findUser(reqBody);
 });
+//更新用户信息
+
+
 module.exports = router

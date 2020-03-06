@@ -1,14 +1,14 @@
 //用户登录表
 let mongoose = require("mongoose");
+import {AuxiliaryClass} from '../util';
 require('mongoose-double')(mongoose);
 let Schema = mongoose.Schema;
 let customerInfSchema = new Schema({
-    customer_inf_id: Schema.Types.ObjectId, //自增主键ID
-    customer_id:Number, //customer_login表的自增ID
-    customer_name:String,   //用户真实姓名
+    customer_id: String, //customer_login表的自增ID
+    customer_name: String,   //用户真实姓名
     identity_card_type:{
-        type:Number,
-        default:1
+        type: Number,
+        default: 1
     }, //证件类型：1 身份证，2 军官证，3 护照,
     identity_card_no:Number, //证件号码
     mobile_phone:Number,    //手机号
@@ -37,7 +37,6 @@ let customerInfSchema = new Schema({
     },
 })
 customerInfSchema.pre('save', function(next) {
-    console.log(this.isNew)
     if (this.isNew) {
       this.createTime = this.updateTime = Date.now()
     }
@@ -46,18 +45,33 @@ customerInfSchema.pre('save', function(next) {
     }
     next()
 })
-class CustomerInf{
+class CustomerInf extends AuxiliaryClass{
     constructor(){
-        this.customer_inf = mongoose.model("customer_inf", customerInfSchema);
+        super()
+        this.mongooseModel = mongoose.model("customer_inf", customerInfSchema);
+        this.dataType = {
+            customer_id: '',
+            customer_name: '',
+            identity_card_type: '',
+            identity_card_no: '',
+            mobile_phone: '',
+            customer_email: '',
+            gender: '',
+            user_point: '',
+            birthday: '',
+            customer_level: '',
+            user_money:''
+        }
     }
-    test(){
+    create(dataArr) {
         const self = this;
         return new Promise(function (resolve, reject){
-            let customer_inf = new self.customer_inf({
-                customer_name:'1112',
-                user_money:199.39
-            });
-            customer_inf.save(function(e, data, numberAffected) {
+            let userData = {};
+            Object.keys(self.dataType).map(k=>{
+                userData[k] = self.dataType[k]
+            })
+            let user = new self.mongooseModel(userData);
+            user.save(function(e, data, numberAffected) {
                 // if (e) response.send(e.message);
                 if(e){
                     reject(e);

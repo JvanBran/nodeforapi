@@ -10,6 +10,14 @@ const Field = datalize.Field;
 Field.prototype.dateTime = function(format = 'YYYY-MM-DD HH:mm') {
     return this.date(format);
 };
+Field.prototype.phone = function() {
+    return this.add((value)=>{
+        if(!(/^1(3|4|5|6|7|8|9)\d{9}$/.test(value))){ 
+            throw new Error('%s is not a valid phone.');
+        }
+        return value
+    })
+};
 const datalizeVerify = () => {
     return async (ctx, next) => {
         try {
