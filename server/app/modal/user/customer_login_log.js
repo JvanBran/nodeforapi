@@ -1,9 +1,9 @@
 //用户登陆日志表
 let mongoose = require("mongoose");
+import {AuxiliaryClass} from '../util';
 require('mongoose-double')(mongoose);
 let Schema = mongoose.Schema;
 let customerLoginLogSchema = new Schema({
-    login_id: Schema.Types.ObjectId, //登陆日志ID
     customer_id:String,   //用户ID
     login_ip:String, //登陆IP
     login_type:Number, //登陆类型：0未成功，1成功
@@ -25,9 +25,15 @@ customerLoginLogSchema.pre('save', function(next) {
     }
     next()
 })
-class CustomerLoginLog{
+class CustomerLoginLog extends AuxiliaryClass{
     constructor(){
-        this.customer_login_log = mongoose.model("customer_login_log", customerLoginLogSchema);
+        super()
+        this.mongooseModel = mongoose.model("customer_login_log", customerLoginLogSchema);
+        this.dataType = {
+            customer_id:'',
+            login_ip:'',
+            login_type:''
+        }
     }
 }
 

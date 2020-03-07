@@ -2,6 +2,7 @@ import { resdata, errdata } from '../../../utils/serve'
 import { customerInf } from '../../modal/user/customer_inf'
 import { customerLogin } from '../../modal/user/customer_login'
 import { customerAddr } from '../../modal/user/customer_addr'
+import { customerLoginLog } from '../../modal/user/customer_login_log'
 import { jwt_token } from '../../../config/serverConfig'
 const jwt = require('jsonwebtoken');
 
@@ -51,9 +52,11 @@ exports.findUser = async (reqBody) =>{
         let respon = {};
         if(list && list.length > 0) {
             let customerInfInfo = await customerInf.find({"customer_id":list[0]._id});
+
             const token = jwt.sign({
                 _id: list[0]._id
             }, jwt_token, { expiresIn: '2h' });
+            const customerLoginLogInfo = await customerLoginLog.create(Object.assign({"login_type":1,"customer_id":list[0]._id},reqBody))
             respon = resdata('0000', '登录成功',Object.assign(
                 {'token':token},
                 {'userInfo':{
@@ -64,12 +67,14 @@ exports.findUser = async (reqBody) =>{
                     'user_point':customerInfInfo[0].user_point,
                     'birthday':customerInfInfo[0].birthday,
                     'customer_level':customerInfInfo[0].customer_level,
-                    'user_money':customerInfInfo[0].user_money
+                    'user_money':customerInfInfo[0].user_money,
+                    "login_ip":customerLoginLogInfo.login_ip
                 }}
                 ));
         }else {
             respon = resdata('9997', '用户不存在', {});
         }
+
         return respon;
     } catch (err) {
         throw new Error(err);

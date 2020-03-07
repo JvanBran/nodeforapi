@@ -32,28 +32,15 @@ class CustomerAddr extends AuxiliaryClass{
     constructor(){
         super()
         this.mongooseModel = mongoose.model("customer_addr", customerAddrSchema);
-    }
-    create(dataArr) {
-        const self = this;
-        return new Promise(function (resolve, reject){
-            let user = new self.mongooseModel({
-                customer_id:dataArr.customer_id,
-				zip: dataArr.zip,
-                province: dataArr.province,
-                city: dataArr.city,
-                district: dataArr.district,
-                address: dataArr.address,
-                is_default: dataArr.is_default
-            });
-            user.save(function(e, data, numberAffected) {
-                // if (e) response.send(e.message);
-                if(e){
-                    reject(e);
-                }else{
-                    resolve(data);
-                }
-            });
-        })
+        this.dataType = {
+            customer_id:'',
+            zip: '',
+            province: '',
+            city: '',
+            district: '',
+            address: '',
+            is_default: ''
+        }
     }
 }
 

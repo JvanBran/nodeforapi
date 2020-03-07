@@ -17,11 +17,12 @@ router.post('/register',datalize([
 router.post('/signin',datalize([
   field('login_name').required(), //登录名
   field('password').required(), //密码
+  field('login_ip').required(), //登录IP
 ]), async (ctx, next) => {
   let reqBody = ctx.request.body;
   ctx.body = await findUser(reqBody);
 });
-//更新用户信息
+
 
 
 module.exports = router

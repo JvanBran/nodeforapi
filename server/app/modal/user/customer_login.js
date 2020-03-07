@@ -31,23 +31,10 @@ class CustomerLogin extends AuxiliaryClass{
     constructor(){
         super()
         this.mongooseModel = mongoose.model("customer_login", customerLoginSchema);
-    }
-    create(dataArr) {
-        const self = this;
-        return new Promise(function (resolve, reject){
-            let user = new self.mongooseModel({
-				login_name: dataArr.customer_name,
-                password: dataArr.password,
-            });
-            user.save(function(e, data, numberAffected) {
-                // if (e) response.send(e.message);
-                if(e){
-                    reject(e);
-                }else{
-                    resolve(data);
-                }
-            });
-        })
+        this.dataType = {
+            login_name: '',
+            password: ''
+        }
     }
 }
 let customerLogin = new CustomerLogin()

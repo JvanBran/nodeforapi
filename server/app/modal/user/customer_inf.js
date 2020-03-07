@@ -63,24 +63,6 @@ class CustomerInf extends AuxiliaryClass{
             user_money:''
         }
     }
-    create(dataArr) {
-        const self = this;
-        return new Promise(function (resolve, reject){
-            let userData = {};
-            Object.keys(self.dataType).map(k=>{
-                userData[k] = self.dataType[k]
-            })
-            let user = new self.mongooseModel(userData);
-            user.save(function(e, data, numberAffected) {
-                // if (e) response.send(e.message);
-                if(e){
-                    reject(e);
-                }else{
-                    resolve(data);
-                }
-            });
-        })
-    }
 }
 
 let customerInf = new CustomerInf()
