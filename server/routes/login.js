@@ -17,9 +17,8 @@ router.post('/register',datalize([
 router.post('/signin',datalize([
   field('login_name').required(), //登录名
   field('password').required(), //密码
-  field('login_ip').required(), //登录IP
 ]), async (ctx, next) => {
-  let reqBody = ctx.request.body;
+  let reqBody = Object.assign(ctx.request.body,{'login_ip':ctx.request.ip});
   ctx.body = await findUser(reqBody);
 });
 
