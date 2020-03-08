@@ -12,7 +12,7 @@ exports.getUpLoadToken = async (ctx, next) => {
         };
         var putPolicy = new qiniu.rs.PutPolicy(options);
         var uploadToken= putPolicy.uploadToken(mac);
-        return resdata('0000', 'success', {uploadToken: uploadToken});
+        return resdata('0000', '成功', {uploadToken: uploadToken});
     } catch (err) {
         return errdata(err);
     }

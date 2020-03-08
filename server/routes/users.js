@@ -3,7 +3,7 @@ import { updateUser,getUserInfo } from '../app/controller/user/customer_inf';
 const datalize = require('datalize');
 const field = datalize.field;
 
-//更新用户信息
+//获取用户信息
 router.post('/getUserInfo',async (ctx, next) => {
   let reqBody = Object.assign(ctx.request.body,{"id":ctx.state.JwtToken._id});
   ctx.body = await getUserInfo(reqBody);
