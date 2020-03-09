@@ -17,7 +17,6 @@ router.post('/updateUserInfo',datalize([
   field('mobile_phone').required().phone(), //手机号码
 ]),async (ctx, next) => {
   let reqBody = Object.assign(ctx.request.body,{"id":ctx.state.JwtToken._id});
-  console.log('reqBody: ', reqBody);
   ctx.body = await updateUserInfo(reqBody);
 });
 //获取用户地址

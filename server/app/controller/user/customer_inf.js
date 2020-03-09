@@ -1,8 +1,5 @@
 import { resdata, errdata } from '../../../utils/serve'
-import { customerInf } from '../../modal/user/customer_inf'
-import { customerLogin } from '../../modal/user/customer_login'
-import { customerAddr } from '../../modal/user/customer_addr'
-import { customerLoginLog } from '../../modal/user/customer_login_log'
+import { customerInf , customerLogin , customerAddr , customerLoginLog } from '../../modal/user'
 import { jwt_token } from '../../../config/serverConfig'
 const jwt = require('jsonwebtoken');
 
@@ -85,7 +82,6 @@ exports.getUserInfo = async (reqBody) =>{
     try {
         let respon = {};
         let customerInfInfo = await customerInf.find({"customer_id":reqBody.id});
-        console.log(customerInfInfo);
         respon = resdata('0000', '成功',customerInfInfo[0])
         return respon;
     } catch (err) {
@@ -96,9 +92,9 @@ exports.getUserInfo = async (reqBody) =>{
 exports.updateUserInfo = async (reqBody) =>{
     try {
         let respon = {};
-        console.log(reqBody.id);
-        console.log(reqBody);
-        respon = resdata('0000', '成功',reqBody)
+        await customerInf.update({customer_id: reqBody.id}, customerInf.ObjKeys(reqBody));
+        let customerInfInfoFind = await customerInf.find({customer_id: reqBody.id});
+        respon = resdata('0000', '成功',customerInf.ObjKeys(customerInfInfoFind[0]))
         return respon;
     } catch (err) {
         throw new Error(err);

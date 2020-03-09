@@ -10,7 +10,7 @@ let customerInfSchema = new Schema({
         type: Number,
         default: 1
     }, //证件类型：1 身份证，2 军官证，3 护照,
-    identity_card_no:Number, //证件号码
+    identity_card_no: String, //证件号码
     mobile_phone:Number,    //手机号
     customer_email:String,  //邮箱
     gender:Number,  //性别

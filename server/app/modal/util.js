@@ -16,11 +16,7 @@ class AuxiliaryClass{
     create(dataArr) {
         const self = this;
         return new Promise(function (resolve, reject){
-            let userData = {};
-            Object.keys(self.dataType).map(k=>{
-                userData[k] = dataArr[k]
-            })
-            let user = new self.mongooseModel(userData);
+            let user = new self.mongooseModel(self.ObjKeys(dataArr));
             user.save(function(e, data, numberAffected) {
                 // if (e) response.send(e.message);
                 if(e){
@@ -34,7 +30,7 @@ class AuxiliaryClass{
     update(option={}, dataArr={}){
         const self = this;
         return new Promise(function (resolve, reject){
-            self.mongooseModel.update(option, dataArr,function(e, data) {
+            self.mongooseModel.updateOne(option, dataArr,function(e, data) {
                 if(e){
                     reject(e);
                 }else{
@@ -56,6 +52,24 @@ class AuxiliaryClass{
                 }
             });
         })
+    }
+    /**
+    * @module util
+    * @author: Jvan
+    * @description: 18146628322@189.cn
+    * @since: 创建时间  2020-03-09 12:01:19
+    * 返回有值且符合现有参数范围的对象
+    */
+    
+    ObjKeys(reqBody){
+        let self = this;
+        let dataArr = {}
+        Object.keys(self.dataType).map(k=>{
+            if(reqBody[k]){
+                dataArr[k]=reqBody[k]
+            }
+        })
+        return dataArr
     }
 }
 
