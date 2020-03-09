@@ -93,9 +93,10 @@ exports.getUserInfo = async (reqBody) =>{
         return errdata(err);
     }
 }
-exports.updateUser = async (reqBody) =>{
+exports.updateUserInfo = async (reqBody) =>{
     try {
         let respon = {};
+        console.log(reqBody.id);
         console.log(reqBody);
         respon = resdata('0000', '成功',reqBody)
         return respon;

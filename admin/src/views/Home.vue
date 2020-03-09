@@ -12,9 +12,9 @@ export default {
   components: { 
   },
   mounted(){
-    for(let i = 0;i<100; i++){
-      this.init(i)
-    }
+    //for(let i = 0;i<500; i++){
+      this.init()
+    //}
   },
   methods:{
     init(i){
