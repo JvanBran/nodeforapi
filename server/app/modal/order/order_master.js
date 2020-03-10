@@ -12,6 +12,7 @@ let orderMasterSchema = new Schema({
     district: String,// 区
     address: String,// 地址
     payment_method: Number,// 支付方式：1现金，2余额，3网银，4支付宝，5微信
+    payment_status: Number,// 订单状态:0-已取消-10-未付款，20-已付款，40-已发货，50-交易成功，60-交易关闭',
     order_money:{
         type:mongoose.Schema.Types.Double,
         default:0.00
@@ -86,6 +87,7 @@ class OrderMaster extends AuxiliaryClass{
             district:'',// 区
             address:'',// 地址
             payment_method:'',// 支付方式：1现金，2余额，3网银，4支付宝，5微信
+            payment_status:'',// 订单状态:0-已取消-10-未付款，20-已付款，40-已发货，50-交易成功，60-交易关闭',
             order_money:'',// 订单金额
             district_money:'',// 优惠金额
             shipping_money:'',// 运费金额
