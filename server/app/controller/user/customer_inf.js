@@ -3,6 +3,7 @@ import { customerInf , customerLogin , customerAddr , customerLoginLog } from '.
 import { jwt_token } from '../../../config/serverConfig'
 const jwt = require('jsonwebtoken');
 
+//注册用户
 exports.creatUser = async (reqBody) => {
     let dataArr = {
         login_name:reqBody.login_name,
@@ -39,6 +40,7 @@ exports.creatUser = async (reqBody) => {
         return errdata(err);
     }
 }
+//登录
 exports.findUser = async (reqBody) =>{
     let dataArr = {
         login_name:reqBody.login_name, //用户名
@@ -78,6 +80,7 @@ exports.findUser = async (reqBody) =>{
         return errdata(err);
     }
 }
+// 获取用户详情
 exports.getUserInfo = async (reqBody) =>{
     try {
         let respon = {};
@@ -89,12 +92,35 @@ exports.getUserInfo = async (reqBody) =>{
         return errdata(err);
     }
 }
+// 更新用户信息
 exports.updateUserInfo = async (reqBody) =>{
     try {
         let respon = {};
         await customerInf.update({customer_id: reqBody.id}, customerInf.ObjKeys(reqBody));
         let customerInfInfoFind = await customerInf.find({customer_id: reqBody.id});
         respon = resdata('0000', '成功',customerInf.ObjKeys(customerInfInfoFind[0]))
+        return respon;
+    } catch (err) {
+        throw new Error(err);
+        return errdata(err);
+    }
+}
+// 更新用户密码
+exports.updateUser = async (reqBody) =>{
+    try {
+        let respon = {};
+        
+        return respon;
+    } catch (err) {
+        throw new Error(err);
+        return errdata(err);
+    }
+}
+// 更新用户地址
+exports.updateUserAddr = async (reqBody) =>{
+    try {
+        let respon = {};
+        
         return respon;
     } catch (err) {
         throw new Error(err);

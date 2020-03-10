@@ -30,9 +30,9 @@ class CustomerLoginLog extends AuxiliaryClass{
         super()
         this.mongooseModel = mongoose.model("customer_login_log", customerLoginLogSchema);
         this.dataType = {
-            customer_id:'',
-            login_ip:'',
-            login_type:''
+            customer_id:'',   //用户ID
+            login_ip:'', //登陆IP
+            login_type: '', //登陆类型：0未成功，1成功
         }
     }
 }

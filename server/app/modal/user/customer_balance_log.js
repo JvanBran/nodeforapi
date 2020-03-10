@@ -3,7 +3,6 @@ let mongoose = require("mongoose");
 require('mongoose-double')(mongoose);
 let Schema = mongoose.Schema;
 let customerBalanceLogSchema = new Schema({
-    balance_id: Schema.Types.ObjectId, //余额日志ID
     customer_id:String,   //用户ID
     source: {
         type:Number,
@@ -35,6 +34,12 @@ customerBalanceLogSchema.pre('save', function(next) {
 class CustomerBalanceLog{
     constructor(){
         this.customer_balance_log = mongoose.model("customer_balance_log", customerBalanceLogSchema);
+        this.dataType={
+            customer_id:'',   //用户ID
+            source: '',   //记录来源：1订单，2退货单
+            source_sn:'', //相关单据ID
+            amount:'', //变动金额
+        }
     }
 }
 

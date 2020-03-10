@@ -33,13 +33,13 @@ class CustomerAddr extends AuxiliaryClass{
         super()
         this.mongooseModel = mongoose.model("customer_addr", customerAddrSchema);
         this.dataType = {
-            customer_id:'',
-            zip: '',
-            province: '',
-            city: '',
-            district: '',
-            address: '',
-            is_default: ''
+            customer_id:'', //customer_login表的自增ID
+            zip: '', //邮编
+            province: '', //地区表中省份的ID
+            city: '',// 地区表中城市的ID
+            district: '', // 地区表中的区ID
+            address: '',// 具体的地址门牌号
+            is_default: '',// 是否默认
         }
     }
 }

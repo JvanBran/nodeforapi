@@ -50,17 +50,17 @@ class CustomerInf extends AuxiliaryClass{
         super()
         this.mongooseModel = mongoose.model("customer_inf", customerInfSchema);
         this.dataType = {
-            customer_id: '',
-            customer_name: '',
-            identity_card_type: '',
-            identity_card_no: '',
-            mobile_phone: '',
-            customer_email: '',
-            gender: '',
-            user_point: '',
-            birthday: '',
-            customer_level: '',
-            user_money:''
+            customer_id: '', //customer_login表的自增ID
+            customer_name: '',   //用户真实姓名
+            identity_card_type:'', //证件类型：1 身份证，2 军官证，3 护照,
+            identity_card_no: '', //证件号码
+            mobile_phone:'',    //手机号
+            customer_email:'',  //邮箱
+            gender:'',  //性别
+            user_point:'',  //用户积分
+            birthday:'', //会员生日
+            customer_level:'',  // 会员级别：1 普通会员，2 青铜，3白银，4黄金，5钻石
+            user_money:'', //用户余额
         }
     }
 }

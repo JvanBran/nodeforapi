@@ -2,7 +2,6 @@
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 let customerPointLogSchema = new Schema({
-    point_id: Schema.Types.ObjectId, //积分日志ID
     customer_id:String,   //用户ID
     source: Number,   //积分来源：0订单，1登陆，2活动
     refer_number: {
@@ -34,6 +33,12 @@ customerPointLogSchema.pre('save', function(next) {
 class CustomerPointLog{
     constructor(){
         this.customer_point_log = mongoose.model("customer_point_log", customerPointLogSchema);
+        this.dataType={
+            customer_id:'',   //用户ID
+            source: '',   //积分来源：0订单，1登陆，2活动
+            refer_number: '', //积分来源相关编号
+            change_point: '',// 变更积分数
+        }
     }
 }
 

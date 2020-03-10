@@ -4,7 +4,6 @@ require('mongoose-double')(mongoose);
 
 let Schema = mongoose.Schema;
 let customerLevelInfSchema = new Schema({
-    customer_level: Schema.Types.ObjectId, //会员级别ID
     level_name:String, //会员级别名称
     min_point:{
         type:Number,
@@ -35,6 +34,11 @@ customerLevelInfSchema.pre('save', function(next) {
 class CustomerLevelInf{
     constructor(){
         this.customer_level_inf = mongoose.model("customer_level_inf", customerLevelInfSchema);
+        this.dataType={
+            level_name:'', //会员级别名称
+            min_point:'', //该级别最低积分
+            modified_time:'', //该级别最低积分
+        }
     }
 }
 
