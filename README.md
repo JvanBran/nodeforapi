@@ -14,8 +14,9 @@
 
 * datalize 表单参数校验，中间件统一返回错误
 * jsonwebtoken、koa-jwt JWT鉴权，中间件统一返回错误
+* log4js 操作日志封装
 * mongoose 操作mongodb
-* qiniu 获取凭证上传
+* qiniu 获取凭证上传图片
 * nodemon Node更更新
 
 ## 说明
