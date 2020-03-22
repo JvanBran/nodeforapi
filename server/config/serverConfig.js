@@ -1,7 +1,9 @@
+var config = require('../filters');
 module.exports = {
-    jwt_token:'test_token',
+    jwt_token:config.jwt,
     qiniuConfig:{
-        AccessKey:'_GZy0O_nhOY1uwzgLYGqNApVo1sCJhwmORqzNDba',
-        SecretKey:'mcuwJcmtHRwW06BpF7sj_nuTR4Y-QfPNMZt7a0jC',
+        bucket:config.qiniu.bucket,
+        AccessKey:config.qiniu.AccessKey,
+        SecretKey:config.qiniu.SecretKey
     }
 }
