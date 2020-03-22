@@ -1,8 +1,8 @@
-//用户余额变动表
+//用户消费表
 let mongoose = require("mongoose");
 require('mongoose-double')(mongoose);
 let Schema = mongoose.Schema;
-let customerBalanceLogSchema = new Schema({
+let customerConsumptionLogSchema = new Schema({
     customer_id:String,   //用户ID
     source: {
         type:Number,
@@ -22,7 +22,7 @@ let customerBalanceLogSchema = new Schema({
         dafault: Date.now()
     },
 })
-customerBalanceLogSchema.pre('save', function(next) {
+customerConsumptionLogSchema.pre('save', function(next) {
     if (this.isNew) {
       this.createTime = this.updateTime = Date.now()
     }
@@ -31,9 +31,9 @@ customerBalanceLogSchema.pre('save', function(next) {
     }
     next()
 })
-class CustomerBalanceLog{
+class CustomerConsumptionionLog{
     constructor(){
-        this.customer_balance_log = mongoose.model("customer_balance_log", customerBalanceLogSchema);
+        this.mongooseModel = mongoose.model("customer_consumption_log", customerConsumptionLogSchema);
         this.dataType={
             customer_id:'',   //用户ID
             source: '',   //记录来源：1订单，2退货单
@@ -43,5 +43,5 @@ class CustomerBalanceLog{
     }
 }
 
-let customerBalanceLog = new CustomerBalanceLog()
-export {customerBalanceLog}
+let customerConsumptionLog = new CustomerConsumptionionLog()
+export {customerConsumptionLog}

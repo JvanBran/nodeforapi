@@ -9,7 +9,10 @@ let customerAddrSchema = new Schema({
     city: String,// 地区表中城市的ID
     district: String, // 地区表中的区ID
     address: String,// 具体的地址门牌号
-    is_default: Number,// 是否默认
+    is_default: {
+        type:Number,
+        default:0
+    },// 是否默认
 	createTime:{    //创建时间
         type: Date,
         dafault: Date.now()
@@ -33,6 +36,7 @@ class CustomerAddr extends AuxiliaryClass{
         super()
         this.mongooseModel = mongoose.model("customer_addr", customerAddrSchema);
         this.dataType = {
+            _id:'',//地址id
             customer_id:'', //customer_login表的自增ID
             zip: '', //邮编
             province: '', //地区表中省份的ID

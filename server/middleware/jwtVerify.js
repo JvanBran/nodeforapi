@@ -27,28 +27,14 @@ const jwtVerify = () => {
                 } catch (error) {
                     ctx.status = 200
                     ctx.body = errdata({},'9999', '请重新登录！')
-                    // if(error.name == 'TokenExpiredError'){
-                    //     ctx.status = 200
-                    //     ctx.body = errdata({},'9999', 'token过期')
-                    // }else{
-                    //     ctx.status = 200
-                    //     ctx.body = errdata({},'9999', 'token不完整')
-                    //     return
-                    // }
                 }
+            }else{
+                ctx.body = errdata({},'9999', '请登录！')
             }
-
             await next()
         } catch (error) {
             ctx.status = 200
             ctx.body = errdata({},'9999', '请重新登录！')
-            // if(error.status === 401){
-            //     ctx.status = 200
-            //     ctx.body = errdata({},'9999', '请重新登录')
-            // }else{
-            //     ctx.status = 404
-            //     ctx.body = errdata({},'9999', '找不到页面')
-            // }
         }
     }
 }

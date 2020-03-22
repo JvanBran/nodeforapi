@@ -25,7 +25,6 @@ const datalizeVerify = () => {
         } catch (error) {
             if (error instanceof datalize.Error) {
                 ctx.status = 200;
-                console.log(error.toJSON())
                 ctx.body = errdata(error.toJSON().errors,9998,'参数错误')
             }
         }

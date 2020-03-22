@@ -32,7 +32,7 @@ class CustomerLogin extends AuxiliaryClass{
         super()
         this.mongooseModel = mongoose.model("customer_login", customerLoginSchema);
         this.dataType = {
-            login_name:'',   //用户登录名
+            login_name:'',   //用户登录名/手机号码
             password: '',   //md5加密的密码
             user_stats: '',//用户状态
         }

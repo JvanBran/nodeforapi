@@ -1,5 +1,5 @@
 const router = require('koa-router')()
-import { creatUser,findUser } from '../app/controller/user/customer_inf'
+import { createUser,findUser } from '../app/controller'
 const datalize = require('datalize');
 const field = datalize.field;
 
@@ -11,7 +11,7 @@ router.post('/register',datalize([
   field('mobile_phone').required().phone(), //手机号码
 ]), async (ctx, next) => {
   let reqBody = ctx.request.body;
-  ctx.body = await creatUser(reqBody);
+  ctx.body = await createUser(reqBody);
 });
 //登录
 router.post('/signin',datalize([
@@ -21,7 +21,4 @@ router.post('/signin',datalize([
   let reqBody = Object.assign(ctx.request.body,{'login_ip':ctx.request.ip});
   ctx.body = await findUser(reqBody);
 });
-
-
-
 module.exports = router
