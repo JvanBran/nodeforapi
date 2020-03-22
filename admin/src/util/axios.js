@@ -48,8 +48,8 @@ axios.interceptors.response.use(response => {
   if(data.code=='0000'){
     return Promise.resolve(data);
   }else{
-    message.error(data.msg);
-    return new Promise(() => { });
+    message.error(data.message);
+    return Promise.reject(data);
   }
 }, err => {
   const { response } = err;
@@ -100,7 +100,7 @@ axios.interceptors.response.use(response => {
     message.error('请求超时!刷新重试。')
   }
   
-  return new Promise(() => { });
+  return Promise.reject(err);
 })
 
 export function post(url, data, otherConfig) {
