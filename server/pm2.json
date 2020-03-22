@@ -1,0 +1,22 @@
+{
+    "apps":{
+        "name": "nodeApi",
+        "script": "./bin/run",
+        "cwd": "./",
+        "log_date_format": "YYYY-MM-DD HH:mm Z",
+        "error_file": "./logs/pm2/app-err.log",
+        "out_file": "./logs/pm2/app-out.log",
+        "merge_logs": true,
+        "watch": true,
+        "ignore_watch": [
+            "node_modules",
+            "logs"
+        ],
+        "instances": 4,
+        "max_memory_restart": 8,
+        "min_uptime": "200s",
+        "max_restarts": 30,
+        "autorestart": true,
+        "restart_delay": 60
+    }
+}
