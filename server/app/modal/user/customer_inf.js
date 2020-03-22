@@ -11,10 +11,14 @@ let customerInfSchema = new Schema({
         default: 1
     }, //证件类型：1 身份证，2 军官证，3 护照,
     identity_card_no: String, //证件号码
-    mobile_phone:Number,    //手机号
-    customer_email:String,  //邮箱
+    mobile_phone: String,    //手机号
+    customer_email: String,  //邮箱
     gender:Number,  //性别
     user_point:Number,  //用户积分
+    user_type:{
+        type:Number,
+        default:0
+    },//用户类型 0 普通用户
     birthday:{
         type: Date,
         dafault: Date.now()
