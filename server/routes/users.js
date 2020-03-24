@@ -64,5 +64,69 @@ router.post('/getUserLists',datalize([
   ctx.body = await getUserList(reqBody);
 })
 
+//获取用户权限
+router.get('/info',async (ctx, next) => {
+  console.log('ctx: ', ctx);
+  ctx.body = {
+    code:'0000',
+    message:"1111",
+    request:""
+  };
+})
+// 获取用户菜单
+router.get('/nav',async (ctx, next) => {
+  console.log('ctx: ', ctx);
+  let nav = [
+    {
+      'name': 'dashboard',
+      'parentId': 0,
+      'id': 1,
+      'meta': {
+        'icon': 'dashboard',
+        'title': '系统管理',
+        'show': true
+      },
+      'component': 'RouteView',
+      'redirect': '/dashboard/workplace'
+    },
+    {
+      'name': 'workplace',
+      'parentId': 1,
+      'id': 7,
+      'meta': {
+        'title': '工作台',
+        'show': true
+      },
+      'component': 'Workplace'
+    },
+    {
+      'name': 'monitor',
+      'path': 'https://www.baidu.com/',
+      'parentId': 1,
+      'id': 3,
+      'meta': {
+        'title': '监控页（外部）',
+        'target': '_blank',
+        'show': true
+      }
+    },
+    {
+      'name': 'Analysis',
+      'parentId': 1,
+      'id': 2,
+      'meta': {
+        'title': '菜单编辑',
+        'show': true
+      },
+      'component': 'Analysis',
+      'path': '/dashboard/analysis'
+    },
+  ]
+  ctx.body = {
+    code:'0000',
+    message:"1111",
+    result:nav
+  };
+})
 
 module.exports = router;

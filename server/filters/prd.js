@@ -10,5 +10,8 @@ module.exports = {
         bucket:'nodeupdata',
         AccessKey:"_GZy0O_nhOY1uwzgLYGqNApVo1sCJhwmORqzNDba",
         SecretKey:"mcuwJcmtHRwW06BpF7sj_nuTR4Y-QfPNMZt7a0jC",
+    },
+    yunpian:{
+        
     }
 }
