@@ -107,7 +107,7 @@
 
 <script>
     import { mapActions } from 'vuex'
-    import {checkForm} from '@/util/util'
+    import {checkForm,timeFix} from '@/util/util'
     export default {
         data(){
             return{
@@ -143,16 +143,16 @@
                         delete loginParams.login_name
                         loginParams[!state.loginType ? 'email' : 'login_name'] = values.login_name
                         loginParams.password = values.password
-
-
-                        Login(loginParams).then(res=>{
-                            console.log('res: ', res);
-                            state.loginBtn = false
-                        }).catch(err=>{
-                            console.log(err)
-                        })
-
-                        
+                          Login(loginParams)
+                          .then(() => {
+                              this.loginSuccess()
+                              state.loginBtn = false
+                          })
+                          .catch(() => {
+                              setTimeout(() => {
+                                state.loginBtn = false
+                            }, 600)
+                          });
                     } else {
                         setTimeout(() => {
                             state.loginBtn = false
@@ -160,6 +160,17 @@
                     }
                 })
             },
+            loginSuccess(){
+                console.log('22')
+                this.$router.push({ path: '/' })
+      // 延迟 1 秒显示欢迎信息
+            setTimeout(() => {
+                this.$notification.success({
+                message: '欢迎',
+                description: `${timeFix()}，欢迎回来`
+                })
+            }, 1000)
+            }
         },
     }
 </script>

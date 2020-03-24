@@ -28,7 +28,6 @@
 import UserMenu from '../tools/UserMenu'
 import Logo from '../tools/Logo'
 import { mixin } from '@/util/mixin'
-console.log('mixin: ', mixin);
 
 export default {
   name: 'GlobalHeader',

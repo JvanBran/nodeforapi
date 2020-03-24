@@ -31,7 +31,7 @@ axios.interceptors.response.use(response => {
 axios.interceptors.response.use(response => {
   let data = response.data;
   if(data.code=='0000'){
-    return Promise.resolve(data);
+    return Promise.resolve(data.result);
   }else{
     message.error(data.message);
     return Promise.reject(data);

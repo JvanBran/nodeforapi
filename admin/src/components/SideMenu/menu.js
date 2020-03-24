@@ -170,7 +170,6 @@ export default {
       return this.renderItem(item)
     })
     // {...{ props, on: on }}
-    console.log('this.selectedKeys',this.selectedKeys)
     return (
       <Menu vModel={this.selectedKeys} {...{ props, on: on }}>
         {menuTree}

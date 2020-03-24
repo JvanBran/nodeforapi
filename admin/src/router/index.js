@@ -22,7 +22,6 @@ VueRouter.prototype.push = function push (location, onResolve, onReject) {
 export const router = new VueRouter(RouterConfig)
 
 router.beforeEach(async (to,from, next)=>{
-  console.log(store.getters.token);
   if (store.getters.token) {
     if (to.path === '/user/login') {
       next()

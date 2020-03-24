@@ -28,15 +28,16 @@ const actions = {
     async Login ({ commit }, userInfo) {
         try {
             const Info = await login(userInfo)
-            console.log('Info: ', Info.result.token);
-            commit('SET_TOKEN', Info.result.token)
-            return Info
+            console.log('Info: ', Info);
+            commit('SET_TOKEN', Info.token)
+            commit('SET_INFO',Info.userInfo)
+            return Promise.resolve();
         } catch (err) {
-            return err
+            return Promise.reject();
         }
         
     },
-    //获取用户信息
+    //获取用户权限信息
     async GetInfo ({ commit }) {
         try {
             const Info = await getInfo()
