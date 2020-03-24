@@ -124,7 +124,6 @@
         },
         mixins:[checkForm],
         created(){
-            //this.init();
         },
         methods: {
             ...mapActions(['Login', 'Logout']),
@@ -161,12 +160,6 @@
                     }
                 })
             },
-            init() {
-                let self = this;
-                self.Login({"login_name":"13307636596","password":"12345633"})
-                
-            },
-            
         },
     }
 </script>

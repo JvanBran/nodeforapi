@@ -1,4 +1,6 @@
-import { login } from './login'
+import { login,getInfo,getCurrentUserNav } from './login'
 export{
-    login
+    login,
+    getInfo,
+    getCurrentUserNav
 }

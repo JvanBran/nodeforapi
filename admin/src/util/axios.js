@@ -1,8 +1,7 @@
 import axios from "axios";
-// import store from "@/store";
-// import { router } from '@/router/index'
+import store from "@/store";
+import {router} from "@/router";
 import { message } from 'ant-design-vue'
-
 
 axios.defaults.baseURL = "";
 axios.defaults.timeout = 30000;
@@ -12,32 +11,18 @@ axios.defaults.headers["Cache-Control"] = "no-cache";
 axios.defaults.headers["pragma"] = "no-cache";
 
 
-let source = axios.CancelToken.source();
-
 //请求添加token
 axios.interceptors.request.use(request => {
-  //request.headers["token"] = store.state.user.token ? encodeURI(store.state.user.token) : ""; // 已将userId保存在store中
-  
+  request.headers.Authorization = store.state.user.token ? "Bearer " +encodeURI(store.state.user.token) : ""; // 已将userId保存在store中
   return request;
 })
 
-//切换页面取消请求
-axios.interceptors.request.use(request => {
-  request.cancelToken = source.token;
-  return request;
-});
-
-// router.beforeEach((to, from, next) => {
-//   source.cancel()
-//   source = axios.CancelToken.source();
-//   next()
-// })
 //登录过期跳转
 axios.interceptors.response.use(response => {
   let data = response.data;
   if(['9999'].includes(data.code)){
-    //store.commit('SET_TOKEN','')
-    //router.push({ path: '/user/login',query: { redirect: router.currentRoute.fullPath }}) // 跳转到登录页面
+    store.commit('SET_TOKEN','')
+    router.push({ path: '/user/login',query: { redirect: router.currentRoute.fullPath }}) // 跳转到登录页面
   }
   return response;
 })

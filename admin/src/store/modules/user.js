@@ -1,11 +1,15 @@
-import { login } from '@/api'
+import { login,getInfo } from '@/api'
 
 const state = {
     token: '',
     name: '',
     email:'',
     userId:'',
-    mobile:''
+    mobile:'',
+    roles: [],
+    welcome: '',
+    avatar: '',
+    info: {}
 }
 
 const getters = {
@@ -15,6 +19,8 @@ const getters = {
     email: state => state.email,
     userId: state => state.userId,
     mobile: state => state.mobile,
+    roles: state => state.roles,
+    token: state => state.token
 }
 
 const actions = {
@@ -22,14 +28,24 @@ const actions = {
     async Login ({ commit }, userInfo) {
         try {
             const Info = await login(userInfo)
-            console.log('Info: ', Info);
-            commit('SET_TOKEN', '')
+            console.log('Info: ', Info.result.token);
+            commit('SET_TOKEN', Info.result.token)
             return Info
         } catch (err) {
             return err
         }
         
     },
+    //获取用户信息
+    async GetInfo ({ commit }) {
+        try {
+            const Info = await getInfo()
+            commit('SET_ROLES',[])
+            return Info
+        } catch (err) {
+            return err
+        }
+    }
 }
 const mutations = {
     SET_TOKEN: (state, token) => {
