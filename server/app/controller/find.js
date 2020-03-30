@@ -1,5 +1,8 @@
 import { resdata, errdata } from '../../utils/serve'
 import { customerInf , customerAddr , customerLoginLog , customerLogin} from '../modal/user'
+
+import { muenNavInf } from '../modal/muennav'
+
 import { paging } from './util'
 import { jwt_token } from '../../config/serverConfig'
 const jwt = require('jsonwebtoken');
@@ -118,6 +121,31 @@ module.exports = {
                 respon = resdata('9998', '分页参数异常', {});
             }
             
+            return respon;
+        } catch (err) {
+            throw new Error(err);
+            return errdata(err);
+        }
+    },
+    // 后台 获取菜单
+    getMeunNav : async (reqBody) =>{
+        try {
+            let respon = {};
+            let muenNavInfInfo = await muenNavInf.find({});
+            respon = resdata('0000', '成功',muenNavInf.ArrKeys(muenNavInfInfo))
+            return respon;
+        } catch (err) {
+            throw new Error(err);
+            return errdata(err);
+        }
+    },
+    // 用户 获取菜单
+    getUserMeunNav : async (reqBody) =>{
+        try {
+            let respon = muenNavInf.ObjKeys(reqBody);
+            // console.log(respon);
+            let muenNavInfInfo = await muenNavInf.find({});
+            respon = resdata('0000', '成功',muenNavInf.ArrKeys(muenNavInfInfo))
             return respon;
         } catch (err) {
             throw new Error(err);

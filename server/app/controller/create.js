@@ -1,6 +1,7 @@
 import { resdata, errdata } from '../../utils/serve'
 import { customerInf , customerLogin , customerAddr, customerLevelInf } from '../modal/user'
 
+import { muenNavInf } from '../modal/muennav'
 module.exports = {
     // 注册用户
     createUser : async (reqBody) => {
@@ -43,8 +44,8 @@ module.exports = {
     createUserAddr : async (reqBody) =>{
         try {
             let respon = {};
-            let list = await customerAddr.create(customerAddr.ObjKeys(Object.assign(reqBody,{'customer_id':reqBody.id})));
-            respon = resdata('0000', '成功', customerAddr.ObjKeysNull(list));
+            let list = await navInf.create(navInf.ObjKeys(Object.assign(reqBody,{'customer_id':reqBody.id})));
+            respon = resdata('0000', '成功', navInf.ObjKeysNull(list));
             return respon;
         } catch (err) {
             throw new Error(err);
@@ -62,6 +63,21 @@ module.exports = {
             return respon;
         } catch (err) {
             throw new Error(err);
+            return errdata(err);
+        }
+    },
+
+
+
+    //后台 创建菜单
+    createMeunNav : async (reqBody) => {
+        try {
+            let respon = {};
+            let muenNavInfInfo = await muenNavInf.create(muenNavInf.ObjKeys(reqBody));
+            respon = resdata('0000', '成功',muenNavInf.ObjKeys(muenNavInfInfo))
+            return respon;
+        } catch (err) {
+            throw new Error(err);s
             return errdata(err);
         }
     }
