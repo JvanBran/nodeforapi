@@ -21,14 +21,14 @@ const checkForm = {
 const listToTree = (list, tree, parentId) => {
   list.forEach(item => {
     // 判断是否为父级菜单
-    if (item.parentId === parentId) {
+    if (item.parent_id == parentId) {
       const child = {
         ...item,
-        key: item.key || item.name,
+        key: item._id,
         children: []
       }
       // 迭代 list， 找到当前菜单相符合的所有子菜单
-      listToTree(list, child.children, item.id)
+      listToTree(list, child.children, item._id)
       // 删掉不存在 children 值的属性
       if (child.children.length <= 0) {
         delete child.children
@@ -46,34 +46,28 @@ const listToTree = (list, tree, parentId) => {
  * @param parent
  * @returns {*}
  */
-const generator = (routerMap, parent) => {
+import {constantRouterMap} from '@/router/router'
+const generator = (routerMap) => {
   return routerMap.map(item => {
-    const { title, show, hideChildren, hiddenHeaderContent, target, icon } = item.meta || {}
+    const { title,show,hiddenHeaderContent,icon,target } = item || {}
     const currentRouter = {
-      // 如果路由设置了 path，则作为默认 path，否则 路由地址 动态拼接生成如 /dashboard/workplace
-      path: item.path || `${parent && parent.path || ''}/${item.key}`,
-      // 路由名称，建议唯一
-      name: item.name || item.key || '',
-      // 该路由对应页面的 组件 :方案1
-      // component: constantRouterComponents[item.component || item.key],
-      // 该路由对应页面的 组件 :方案2 (动态加载)
-      component: (constantRouterComponents[item.component || item.key]) || (() => import(`@/views/${item.component}`)),
-
-      // meta: 页面标题, 菜单图标, 页面权限(供指令权限用，可去掉)
+      name: item.name,
+      path: item.path,
+      component: (constantRouterMap[item.component]),
       meta: {
-        title: title,
-        icon: icon || undefined,
-        hiddenHeaderContent: hiddenHeaderContent,
-        target: target,
-        permission: item.name
-      }
+          title: title,
+          icon: icon || undefined,
+          hiddenHeaderContent: hiddenHeaderContent,
+          target: target,
+          permission: item.name
+      } 
     }
     // 是否设置了隐藏菜单
     if (show === false) {
-      currentRouter.hidden = true
+        currentRouter.hidden = true
     }
     // 是否设置了隐藏子菜单
-    if (hideChildren) {
+    if (hiddenHeaderContent) {
       currentRouter.hideChildrenInMenu = true
     }
     // 为了防止出现后端返回结果不规范，处理有可能出现拼接出两个 反斜杠
@@ -81,23 +75,15 @@ const generator = (routerMap, parent) => {
       currentRouter.path = currentRouter.path.replace('//', '/')
     }
     // 重定向
-    item.redirect && (currentRouter.redirect = item.redirect)
+    item.redirect && (currentRouter.redirect = {'path':item.redirect})
     // 是否有子菜单，并递归处理
     if (item.children && item.children.length > 0) {
       // Recursion
-      currentRouter.children = generator(item.children, currentRouter)
+      currentRouter.children = generator(item.children)
     }
     return currentRouter
   })
 }
-
-// 前端路由表
-const constantRouterComponents = {}
-// 前端未找到页面路由（固定不用改）
-const notFoundRouter = {
-  path: '*', redirect: '/404', hidden: true
-}
-
 /**
  * 触发 window.resize
  */
@@ -119,4 +105,4 @@ const welcome = () => {
   return arr[index]
 }
 
-export { checkForm,listToTree,generator,notFoundRouter,triggerWindowResizeEvent,timeFix,welcome }
+export { checkForm,listToTree,generator,triggerWindowResizeEvent,timeFix,welcome }

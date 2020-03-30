@@ -1,60 +1,24 @@
-import { UserLayout,BasicLayout,RouteView, PageView } from '@/layouts'
+import { UserLayout,BasicLayout, PageView , BlankLayout , RouteView } from '@/layouts'
+// RouteView
+export const constantRouterMap = {
+  BasicLayout: BasicLayout,
+  BlankLayout: BlankLayout,
+  RouteView: RouteView,
+  PageView: PageView,
+  '403': () => import(/* webpackChunkName: "error" */ '@/views/exception/403'),
+  '404': () => import(/* webpackChunkName: "error" */ '@/views/exception/404'),
+  '500': () => import(/* webpackChunkName: "error" */ '@/views/exception/500'),
+
+  'fromPath': () =>import('@/views/system/menu'),
+  'menuPath': () =>import('@/views/system/menu'),
+  'from': () =>import('@/views/authority/form'),
+  'from1': () =>import('@/views/authority/form')
+}
 /**
  * 基础路由
  * @type { *[] }
  */
 const asyncRouterMap = [
-    {
-      path: '/',
-      name: 'index',
-      component: BasicLayout,
-      meta: { title: '首页' },
-      redirect: '/system',
-      children: [
-        {
-          path: '/system',
-          name: 'system',
-          component: RouteView,
-          redirect: '/system/menu',
-          meta: { title: '系统管理', icon:'database', keepAlive: true },
-          children: [
-                {
-                  path: 'menu',
-                  name: 'menu',
-                  component: () => import('@/views/system/menu'),
-                  meta: { title: '菜单编辑管理', keepAlive: true }
-                },
-                {
-                  path: 'menu1',
-                  name: 'menu1',
-                  component: () => import('@/views/system/menu'),
-                  meta: { title: '菜单权限配置', keepAlive: true }
-                }
-          ]
-        },
-        {
-          path: '/authority',
-          name: 'authority',
-          component: PageView,
-          redirect: '/authority/from',
-          meta: { title: '权限编辑', icon:'form', keepAlive: true },
-          children: [
-                {
-                  path: 'from',
-                  name: 'from',
-                  component: () => import('@/views/authority/from'),
-                  meta: { title: '用户权限编辑', keepAlive: true }
-                },
-                {
-                  path: 'from1',
-                  name: 'from1',
-                  component: () => import('@/views/authority/from'),
-                  meta: { title: '角色权限编辑', keepAlive: true }
-                }
-          ]
-        },
-      ]
-    },
     {
         path: '/user',
         component: UserLayout,
@@ -86,6 +50,9 @@ const asyncRouterMap = [
     {
       path: '/404',
       component: () => import('@/views/exception/404')
+    },
+    {
+      path: '*', redirect: '/404', hidden: true
     }
 ]
 export const routers = [

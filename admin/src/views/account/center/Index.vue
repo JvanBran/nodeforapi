@@ -1,6 +1,6 @@
 <template>
     <div>
-        404
+        个人中心
     </div>
 </template>
 

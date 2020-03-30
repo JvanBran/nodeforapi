@@ -1,40 +1,47 @@
 /**
  * 向后端请求用户的菜单，动态生成路由
  */
-// import { router } from '@/router'
+
 import { getCurrentUserNav } from '@/api'
-// import { listToTree,generator,notFoundRouter } from '@/util/util'
+import { routers } from '@/router/router'
+import { listToTree , generator} from '@/util/util'
 const state = {
-    routers: [],
+    localrouters: routers,
     addRouters: []
 }
 const getters = {
+    addRouters: state => state.addRouters,
 }
+const rootRouter = {
+    key: '',
+    name: 'index',
+    path: '/',
+    component: 'BasicLayout',
+    redirect: '/system',
+    meta: {
+      title: '首页'
+    },
+    children: []
+  }
+
 const actions = {
     async GenerateRoutes ({ commit }) {
         let info = await getCurrentUserNav()
-        
-        // const menuNav = []
-        // const childrenNav = []
-        // const { result } = info
-        // listToTree(result, childrenNav, 0)
-        // console.log(menuNav)
-        // console.log(childrenNav)
-        // rootRouter.children = childrenNav
-        // menuNav.push(rootRouter)
-        // console.log('menuNav', menuNav)
-        // const routers = generator(menuNav)
-        // routers.push(notFoundRouter)
-        // console.log('routers', routers)
-        // console.log('result: ', result);
-        commit('SET_ROUTERS',[])
+        const menuNav = []
+        const childrenNav = []
+        listToTree(info, childrenNav, 0)
+        rootRouter.children = childrenNav
+        menuNav.push(rootRouter)
+        console.log('menuNav', menuNav)
+        const routers = generator(menuNav)
+        commit('SET_ROUTERS',routers)
         return info
     }
 }
 const mutations = {
-    SET_ROUTERS: (state, routers) => {
-        state.addRouters = routers
-        //state.routers = constantRouterMap.concat(routers)
+    SET_ROUTERS: (state, routerArr) => {
+        state.addRouters = routerArr;
+        state.localrouters =  routers.concat(routerArr)
       }
 }
 

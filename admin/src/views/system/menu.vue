@@ -1,6 +1,11 @@
 <template>
     <a-card :bordered="false">
         <a-row :gutter="24">
+            <a-col :span="5">
+                <a-button type="primary">添加根目录</a-button>
+            </a-col>
+        </a-row>
+        <a-row :gutter="24" style="margin-top:10px;">
             <tree-list
                 :dataSource="orgTree"
                 :openKeys.sync="openKeys"
@@ -11,84 +16,51 @@
                 >
             </tree-list>
         </a-row>
+        <menuModal ref="modal" @ok="handleSaveOk" @close="handleSaveClose"></menuModal>
     </a-card>
 </template>
 
 <script>
     import {TreeList} from '@/components'
-    console.log('sTree: ', TreeList);
+    import menuModal from './modules/menuModal'
+    // creatMeunNav
+    import { getMeunNav } from '@/api'
+    import {listToTree} from '@/util/util'
     export default {
         data(){
             return{
-                openKeys: ['key-01'],
-                orgTree:[
-                {
-                    'key': 'key-01',
-                    'title': '系统管理',
-                    'icon': 'database',
-                    'children': [
-                        {
-                            'key': 'key-01-01',
-                            'title': '系统编辑管理',
-                            'icon': null,
-                        }, 
-                        {
-                            'key': 'key-01-02',
-                            'title': '菜单权限配置',
-                            'icon': null
-                        }
-                    ]
-                }, 
-                {
-                    'key': 'key-02',
-                    'title': '权限编辑',
-                    'icon': 'form',
-                    'children': [
-                        {
-                        'key': 'key-02-01',
-                        'title': '用户权限编辑',
-                        'icon': null
-                        }, {
-                        'key': 'key-02-02',
-                        'title': '角色权限编辑',
-                        'icon': null
-                        }, {
-                        'key': 'key-02-03',
-                        'title': '三级菜单',
-                        'icon': null,
-                        'children': [
-                            {
-                                'key': 'key-02-03-01',
-                                'title': '财务制度建设',
-                                'icon': null
-                            },
-                            {
-                                'key': 'key-02-03-02',
-                                'title': '会计核算',
-                                'icon': null
-                            }
-                        ]
-                    }]
-                }
-                ]
+                openKeys: [],
+                orgTree:[],
             }
         },
         components:{
-            TreeList
+            TreeList,menuModal
         },
         created(){
-            console.log(this.$route.fullPath)
+            this.init()
         },
         methods: {
-            handleClick (e) {
-                console.log('e: ', e);
+            async init(){
+                let self = this;
+                let meunList = await getMeunNav();
+                const childrenNav = []
+                listToTree(meunList,childrenNav,0);
+                self.orgTree = childrenNav;
+                childrenNav.map(item=>{
+                    self.openKeys.push(item.key)
+                })
             },
-            handleAdd (item) {
-                console.log('item: 11', item);
+            handleClick (e) {
+                console.log('handleClick: ', e);
+            },
+            handleAdd (item,k,p) {
+                console.log('handleAdd:', item,k,p);
             },
             handleTitleClick(item){
-                console.log('item: ', item);
-            }
+                console.log('handleTitleClick: ', item);
+            },
+            handleSaveOk(){},
+            handleSaveClose(){}
         }
     }
 </script>

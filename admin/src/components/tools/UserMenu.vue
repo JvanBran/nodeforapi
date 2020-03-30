@@ -53,7 +53,6 @@ export default {
   },
   computed: {
     ...mapGetters(['nickname', 'avatar'])
-
   },
   methods: {
     ...mapActions(['Logout']),

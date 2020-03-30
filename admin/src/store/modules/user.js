@@ -1,7 +1,7 @@
 import { login,getInfo } from '@/api'
 
 const state = {
-    token: '',
+    token: '1211212',
     name: '',
     email:'',
     userId:'',
@@ -14,7 +14,7 @@ const state = {
 
 const getters = {
     avatar: state => state.avatar,
-    nickname: state => state.name,
+    nickname: state => state.info.login_name,
     userInfo: state => state.info,
     email: state => state.email,
     userId: state => state.userId,
@@ -41,7 +41,7 @@ const actions = {
     async GetInfo ({ commit }) {
         try {
             const Info = await getInfo()
-            commit('SET_ROLES',[])
+            commit('SET_ROLES',[1,2,3])
             return Info
         } catch (err) {
             return err

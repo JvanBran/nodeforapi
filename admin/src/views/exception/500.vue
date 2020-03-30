@@ -1,6 +1,6 @@
 <template>
     <div>
-        from
+        500
     </div>
 </template>
 

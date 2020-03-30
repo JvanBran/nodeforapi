@@ -53,15 +53,14 @@
             SideMenu,GlobalHeader,GlobalFooter,RouteView,MultiTab
         },
         created () {
-            //this.menus = this.mainMenu.find(item => item.path === '/').children
-            this.menus = this.$router.options.routes.find(item => item.path === '/').children
-            console.log('this.menus: ', this.menus);
+            this.menus = this.mainMenu.find(item => item.path === '/').children
+            //this.menus = this.$router.options.routes.find(item => item.path === '/').children
             //this.collapsed = !this.sidebarOpened
         },
         computed: {
             ...mapState({
                 // 动态主路由
-                //mainMenu: state => state.asyncRouter.addRouters
+                mainMenu: state => state.asyncRouter.addRouters
             }),
         },
         watch: {

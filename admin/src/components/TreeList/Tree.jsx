@@ -1,7 +1,6 @@
-import { Menu, Icon, Input } from 'ant-design-vue'
+import { Menu, Icon } from 'ant-design-vue'
 
 const { Item, SubMenu } = Menu
-const { Search } = Input
 
 export default {
   name: 'Tree',
@@ -28,20 +27,15 @@ export default {
     }
   },
   methods: {
-    handlePlus (item) {
-      this.$emit('add', item)
+    handlePlus (item,k,p) {
+      console.log('item,k,p: ', item,k,p);
+      this.$emit('add', item,k,p)
+    },
+    dropdownPlus(item,it){
+      console.log('item,k,p: ', item,it);
     },
     handleTitleClick (...args) {
       this.$emit('titleClick', { args })
-    },
-
-    renderSearch () {
-      return (
-        <Search
-          placeholder="input search text"
-          style="width: 100%; margin-bottom: 1rem"
-        />
-      )
     },
     renderIcon (icon) {
       return icon && (<Icon type={icon} />) || null
@@ -51,7 +45,7 @@ export default {
         <Item key={item.key}>
           { this.renderIcon(item.icon,item) }
           { item.title }
-            <a class="btn" style="width: 20px;z-index:1300" {...{ on: { click: () => this.handlePlus(item) } }}><a-icon type="delete" /></a>
+            <a class="btn" style="width: 20px;z-index:1300" {...{ on: { click: () => {event.stopPropagation();this.handlePlus(item)} } }}><a-icon type="delete" /></a>
         </Item>
       )
     },
@@ -70,10 +64,10 @@ export default {
               <span>{ item.title } 
                 <a-icon style="margin-left:20px;" type="form" /> 
               </span>
-              <a-menu slot="overlay">
-                <a-menu-item key="1">新增</a-menu-item>
-                <a-menu-item key="2">编辑</a-menu-item>
-                <a-menu-item key="3">移除</a-menu-item>
+              <a-menu slot="overlay" {...{ on: { click: (it) => this.dropdownPlus(item,it) } }}>
+                <a-menu-item key="add">新增</a-menu-item>
+                <a-menu-item key="edit">编辑</a-menu-item>
+                <a-menu-item key="remove">移除</a-menu-item>
               </a-menu>
             </a-dropdown>
         </span>
@@ -88,7 +82,7 @@ export default {
     }
   },
   render () {
-    const { dataSource, search } = this.$props
+    const { dataSource } = this.$props
 
     // this.localOpenKeys = openKeys.slice(0)
     const list = dataSource.map(item => {
@@ -97,7 +91,6 @@ export default {
 
     return (
       <div class="tree-wrapper">
-        { search ? this.renderSearch() : null }
         <Menu mode="inline" class="custom-tree" {...{ on: { click: item => this.$emit('click', item), 'update:openKeys': val => { this.localOpenKeys = val } } }} openKeys={this.localOpenKeys}>
           { list }
         </Menu>
