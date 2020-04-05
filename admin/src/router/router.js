@@ -20,6 +20,34 @@ export const constantRouterMap = {
  */
 const asyncRouterMap = [
     {
+        path: '/',
+        name: 'index',
+        component: BasicLayout,
+        redirect: '/system',
+        meta: { title: '首页' },
+        children: [
+            {
+              name:'system',
+              path:'system',
+              component:PageView,
+              meta:{
+                title:'系统管理'
+              },
+              redirect: '/system/list',
+              children:[
+                {
+                  name:'list',
+                  path:'list',
+                  meta:{
+                    title:'管理菜单'
+                  },
+                  component: () => import('@/views/system/menu')
+                }
+              ]
+            }
+        ]
+    },
+    {
         path: '/user',
         component: UserLayout,
         redirect: '/user/login',
@@ -48,11 +76,8 @@ const asyncRouterMap = [
         ]
     },  
     {
-      path: '/404',
+      path: '*',
       component: () => import('@/views/exception/404')
-    },
-    {
-      path: '*', redirect: '/404', hidden: true
     }
 ]
 export const routers = [

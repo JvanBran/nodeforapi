@@ -8,7 +8,7 @@ import {
   createUserAddr ,
 
   getUserMeunNav,
-} from '../app/controller';
+} from '../../app/controller';
 const datalize = require('datalize');
 const field = datalize.field;
 
@@ -77,6 +77,7 @@ router.get('/info',async (ctx, next) => {
 })
 // 获取用户菜单
 router.get('/nav',async (ctx, next) => {
+  
   let reqBody = Object.assign(ctx.request.body,{"id":ctx.request.body.user_id?ctx.request.body.user_id:ctx.state.JwtToken._id});
   ctx.body = await getUserMeunNav(reqBody);
 })

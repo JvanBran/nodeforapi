@@ -18,18 +18,11 @@ let muenNavInfoSchema = new Schema({
         type:Boolean,
         default:true
     },//是否需要缓存状态
-    hideChildren:{
-        type:Boolean,
-        default:false
-    }, // 强制显示 MenuItem 而不是 SubMenu
-    permission:{
+    permission:String, //权限名
+    permissionList:{
         type:Array,
-        default:[]
-    }, //权限名
-    hideHeader: {
-        type:Boolean,
-        default:false
-    }, //
+        default:['add','import','get','update','delete','export','query']
+    },//页面具有权限
     isShow:{
         type:Boolean,
         default:true
@@ -57,32 +50,18 @@ muenNavInfoSchema.pre('save', function(next) {
     }
     next()
 })
-class MuenNavInf extends AuxiliaryClass{
+class SystemMuenNavInf extends AuxiliaryClass{
     constructor(){
         super()
-        this.mongooseModel = mongoose.model("muen_nav_info", muenNavInfoSchema);
+        this.mongooseModel = mongoose.model("system_muennav_info", muenNavInfoSchema);
         this.dataType = {
             _id:"", //当前id
-            parent_id:'', //父级id
-
-            title:'', //栏目标题
-            path:'', //栏目路由路径
-            name:'', //栏目路由名
-
-            component:'', //栏目文件地址 模版或者页面import
-
-            redirect:'', //如果是组则为默认跳转页面否则为空
-            icon:'', //栏目图标 只有组标题才显示
-            keepAlive:'',//是否需要缓存状态
-            hideChildren:'', // 强制显示 MenuItem 而不是 SubMenu
-            hideHeader: '', //
-            permission:'', //权限名
-            isShow:'', //是否显示    前端则是删除
-            show:'', //是否在列表上显示
-            target:'', //打开方式
+            role_name:"", //角色名
+            role_permission_page: "",// 角色拥有的页面
+            role_page_permission: "",// 角色拥有的页面权限
         }
     }
 }
 
-let muenNavInf = new MuenNavInf()
-export {muenNavInf}
+let systemMuenNavInf = new SystemMuenNavInf()
+export {systemMuenNavInf}

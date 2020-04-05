@@ -28,15 +28,15 @@ export default {
   },
   methods: {
     handlePlus (item,k,p) {
-      console.log('item,k,p: ', item,k,p);
+      //console.log('item,k,p: ', item,k,p);
       this.$emit('add', item,k,p)
     },
     dropdownPlus(item,it){
-      console.log('item,k,p: ', item,it);
+      this.$emit('edit',Object.assign(item,it))
     },
-    handleTitleClick (...args) {
-      this.$emit('titleClick', { args })
-    },
+    // handleTitleClick (...args) {
+    //   this.$emit('titleClick', { args })
+    // },
     renderIcon (icon) {
       return icon && (<Icon type={icon} />) || null
     },

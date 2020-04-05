@@ -3,7 +3,8 @@ let mongoose = require("mongoose");
 import {AuxiliaryClass} from '../util';
 let Schema = mongoose.Schema;
 let customerLoginSchema = new Schema({
-    login_name:String,   //用户登录名
+    customer_email: String, // 用户邮箱
+    mobile_phone: String, // 手机号码
 	password: String,   //md5加密的密码
     user_stats: {
         type:Number,
@@ -32,7 +33,8 @@ class CustomerLogin extends AuxiliaryClass{
         super()
         this.mongooseModel = mongoose.model("customer_login", customerLoginSchema);
         this.dataType = {
-            login_name:'',   //用户登录名/手机号码
+            customer_email:'', //用户邮箱
+            mobile_phone:'', // 手机号码
             password: '',   //md5加密的密码
             user_stats: '',//用户状态
         }

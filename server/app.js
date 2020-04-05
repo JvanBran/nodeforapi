@@ -48,7 +48,7 @@ app.use(async (ctx, next) => {
 app.use(koajwt({
   secret: serverConfig.jwt_token
 }).unless({
-  path: ['/login/signin','/login/register']
+  path: ['/public/user/register','/public/user/signin']
 }));
 
 // routes
