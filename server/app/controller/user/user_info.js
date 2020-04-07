@@ -131,6 +131,19 @@ module.exports = {
             return errdata(err);
         }
     },
+    // 更新用户权限
+    updateUserRole : async (reqBody) =>{
+        try {
+            let respon = {};
+            await customerLogin.update({customer_id: reqBody.id}, customerLogin.ObjKeys(reqBody));
+            let customerLoginInfoFind = await customerLogin.find({customer_id: reqBody.id});
+            respon = resdata('0000', '成功',customerLogin.ObjKeysNull(customerLoginInfoFind[0]))
+            return respon;
+        } catch (err) {
+            throw new Error(err);
+            return errdata(err);
+        }
+    },
     // 新增用户地址
     createUserAddr : async (reqBody) =>{
         try {

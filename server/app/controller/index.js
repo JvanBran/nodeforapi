@@ -1,7 +1,13 @@
 
 import { 
-    createUserAddr , 
-    createMeunNav
+    getMeunNav , 
+    createMeunNav,
+    updateMeunNav,
+
+    getUserMeunNav,
+    getUserRole,
+    createUserRole,
+    updateUserRole
 } from './system/system_info'
 import { 
     createUser , 
@@ -11,12 +17,20 @@ import {
     updateUserInfo , 
     updateUserPassword,
     getUserAddr , 
-    getMeunNav , 
-    getUserMeunNav ,
-    updateUserAddr
+    createUserAddr,
+    updateUserAddr,
 } from './user/user_info'
 
 export{
+    getMeunNav , 
+    getUserMeunNav,
+    createMeunNav,
+    updateMeunNav,
+    getUserRole,
+    createUserRole,
+    updateUserRole,
+
+
     createUser,
     userLogin,
     getUserInfo,
@@ -26,9 +40,4 @@ export{
     getUserAddr , 
     createUserAddr,
     updateUserAddr,
-
-
-    createMeunNav,
-    getMeunNav,
-    getUserMeunNav,
 }

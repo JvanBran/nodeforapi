@@ -3,7 +3,7 @@ let mongoose = require("mongoose");
 import {AuxiliaryClass} from '../util';
 require('mongoose-double')(mongoose);
 let Schema = mongoose.Schema;
-let muenNavInfoSchema = new Schema({
+let systemPageRoleSchema = new Schema({
     parent_id: {
         type:String,
         default:0
@@ -18,11 +18,12 @@ let muenNavInfoSchema = new Schema({
         type:Boolean,
         default:true
     },//是否需要缓存状态
+
     permission:String, //权限名
-    permissionList:{
+    buttonpermissionList:{
         type:Array,
         default:['add','import','get','update','delete','export','query']
-    },//页面具有权限
+    },//页面具有按钮权限
     isShow:{
         type:Boolean,
         default:true
@@ -41,7 +42,7 @@ let muenNavInfoSchema = new Schema({
         dafault: Date.now()
     },
 })
-muenNavInfoSchema.pre('save', function(next) {
+systemPageRoleSchema.pre('save', function(next) {
     if (this.isNew) {
       this.createTime = this.updateTime = Date.now()
     }
@@ -50,10 +51,10 @@ muenNavInfoSchema.pre('save', function(next) {
     }
     next()
 })
-class SystemMuenNavInf extends AuxiliaryClass{
+class SystemPageRole extends AuxiliaryClass{
     constructor(){
         super()
-        this.mongooseModel = mongoose.model("system_muennav_info", muenNavInfoSchema);
+        this.mongooseModel = mongoose.model("system_page_role", systemPageRoleSchema);
         this.dataType = {
             _id:"", //当前id
             parent_id:'', //父级id
@@ -65,7 +66,7 @@ class SystemMuenNavInf extends AuxiliaryClass{
             icon:'', //栏目图标 只有组标题才显示
             keepAlive:'',//是否需要缓存状态
             permission:'', //权限名
-            permissionList:'',//页面权限
+            buttonpermissionList:'',//按钮权限
             isShow:'', //是否显示    前端则是删除
             show:'', //是否在列表上显示
             target:'', //打开方式
@@ -73,5 +74,5 @@ class SystemMuenNavInf extends AuxiliaryClass{
     }
 }
 
-let systemMuenNavInf = new SystemMuenNavInf()
-export {systemMuenNavInf}
+let systemPageRole = new SystemPageRole()
+export {systemPageRole}

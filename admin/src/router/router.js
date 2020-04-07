@@ -9,7 +9,7 @@ export const constantRouterMap = {
   '404': () => import(/* webpackChunkName: "error" */ '@/views/exception/404'),
   '500': () => import(/* webpackChunkName: "error" */ '@/views/exception/500'),
 
-  'fromPath': () =>import('@/views/system/menu'),
+  'rolePath': () =>import('@/views/system/menu'),
   'menuPath': () =>import('@/views/system/menu'),
   'from': () =>import('@/views/authority/form'),
   'from1': () =>import('@/views/authority/form')

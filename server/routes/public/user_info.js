@@ -21,7 +21,7 @@ router
     let reqBody = Object.assign(ctx.request.body,{'login_ip':ctx.request.ip});
     ctx.body = await userLogin(reqBody);
 })
-// 获取用户信息
+// 获取用户信息（包含权限信息）
 .get('/userInfo/:id',async (ctx, next) => {
     let reqBody = Object.assign(ctx.request.body,{"id":ctx.params.id?ctx.params.id:ctx.state.JwtToken._id});
     ctx.body = await getUserInfo(reqBody);
@@ -74,5 +74,6 @@ router
         name:'22'
     };
 })
+// 获取用户对应页面菜单
 
 module.exports = router;

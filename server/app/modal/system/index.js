@@ -1,5 +1,7 @@
-import { systemMuenNavInf } from './system_muennav_info';
+import { systemPageRole } from './system_page_role';
+import { systemRoleInfo } from './system_role_info';
 
 module.exports = {
-    systemMuenNavInf
+    systemPageRole,
+    systemRoleInfo
 }

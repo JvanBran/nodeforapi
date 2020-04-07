@@ -1,7 +1,7 @@
 import { post , get } from "@/util/axios"
 //登录
 const login = async (params) => {
-    return post("/api/login/signin", params);
+    return post("/api/public/user/signin", params);
 }
 const getInfo = async (params) =>{
     return get("/api/users/info", params);
