@@ -26,10 +26,9 @@ router.beforeEach(async (to,from, next)=>{
     if (to.path === '/user/login') {
       next()
     }else{
-      if (store.getters.roles.length != 0) {
+      if (store.getters.roles.length == 0) {
           await store.dispatch('GetInfo')
           await store.dispatch('GenerateRoutes')
-          console.log('111')
           router.addRoutes(store.getters.addRouters)
           const redirect = decodeURIComponent(from.query.redirect || to.path)
           if (to.path === redirect) {

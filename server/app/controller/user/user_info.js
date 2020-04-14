@@ -1,5 +1,6 @@
 import { resdata, errdata } from '../../../utils/serve'
 import { customerInf , customerLogin , customerAddr ,customerLoginLog } from '../../modal/user'
+import { systemRoleInfo , systemPageRole } from '../../modal/system'
 import { paging } from '../util'
 import { jwt_token } from '../../../config/serverConfig'
 const jwt = require('jsonwebtoken');
@@ -31,7 +32,9 @@ module.exports = {
             if(list && list.length > 0) {
                 let customerInfInfo = await customerInf.find({"customer_id":list[0]._id});
                 const token = jwt.sign({
-                    _id: list[0]._id
+                    _id: userList[0].customer_id,
+                    user_type: userList[0].user_type,
+                    user_role: userList[0].user_role,
                 }, jwt_token, { expiresIn: '240h' });
                 const customerLoginLogInfo = await customerLoginLog.create(Object.assign({"login_type":1,"customer_id":list[0]._id},reqBody))
                 respon = resdata('0000', '登录成功',Object.assign({
@@ -63,6 +66,33 @@ module.exports = {
                 respon = resdata('9997', '用户不存在', {});
             }
             
+            return respon;
+        } catch (err) {
+            throw new Error(err);
+            return errdata(err);
+        }
+    },
+    // 获取用户权限
+    getUserInfoRole: async (reqBody) =>{
+        console.log('reqBody: ', reqBody);
+        try {
+            let respon = {};
+            //TODO 假设都是管理员
+            let list = await systemRoleInfo.find({"_id":reqBody.user_role[0]});
+            let pageList = await systemPageRole.find()
+            let rolePermission = [];
+            pageList.map(item=>{
+                rolePermission.push({
+                    'buttonpermissionList':item.buttonpermissionList,
+                    'permission':item.permission,
+                    'title':item.title
+                })
+            })
+            if(list && list.length > 0){
+                respon = resdata('0000', '成功',rolePermission)
+            }else{
+                respon = resdata('9997', '角色不存在', {});
+            }
             return respon;
         } catch (err) {
             throw new Error(err);

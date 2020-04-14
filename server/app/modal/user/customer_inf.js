@@ -19,6 +19,10 @@ let customerInfSchema = new Schema({
         type:Number,
         default:0
     },//用户类型 0 普通用户
+    user_role:{
+        type:Array,
+        default:[]
+    }, //用户角色
     birthday:{
         type: Date,
         dafault: Date.now()

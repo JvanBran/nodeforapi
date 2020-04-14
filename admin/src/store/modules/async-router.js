@@ -30,10 +30,12 @@ const actions = {
         const menuNav = []
         const childrenNav = []
         listToTree(info, childrenNav, 0)
+        console.log('info: ', info);
         rootRouter.children = childrenNav
         menuNav.push(rootRouter)
         console.log('menuNav', menuNav)
         const routers = generator(menuNav)
+        console.log('routers: ', routers);
         commit('SET_ROUTERS',routers)
         return info
     }

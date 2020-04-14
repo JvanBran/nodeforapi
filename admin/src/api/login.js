@@ -3,14 +3,14 @@ import { post , get } from "@/util/axios"
 const login = async (params) => {
     return post("/api/public/user/signin", params);
 }
-const getInfo = async (params) =>{
-    return get("/api/users/info", params);
+const userInfoRole = async (params) =>{
+    return get("/api/public/user/userInfoRole", params);
 }
 const getCurrentUserNav = async (params) =>{
-    return get("/api/users/nav", params);
+    return get("/api/admin/system/usermeunlist", params);
 }
 export{
     login,
-    getInfo,
+    userInfoRole,
     getCurrentUserNav
 }

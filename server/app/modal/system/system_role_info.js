@@ -5,6 +5,10 @@ require('mongoose-double')(mongoose);
 let Schema = mongoose.Schema;
 let systemRoleInfoSchema = new Schema({
     role_name:String, //角色名
+    role_leve:{
+        type: Number,
+        default: 0
+    },
     describe:String, //描述
     status:String,// 启用状态
     creatorId:String,// 创建用户
@@ -37,6 +41,7 @@ class SystemRoleInfo extends AuxiliaryClass{
         this.dataType = {
             _id:"", //当前id
             role_name:"", //角色名
+            role_leve:"", //角色权重
             describe:"", //描述
             status:"",// 启用状态
             creatorId:"",// 创建用户

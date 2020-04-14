@@ -3,16 +3,19 @@ import {
     getMeunNav , 
     createMeunNav,
     updateMeunNav,
-
     getUserMeunNav,
-    getUserRole,
-    createUserRole,
-    updateUserRole
-} from './system/system_info'
+
+} from './system/system_page'
+import { 
+    getRole,
+    createRole,
+    updateRole
+} from './system/system_role'
 import { 
     createUser , 
     userLogin , 
     getUserInfo , 
+    getUserInfoRole ,
     getUserList , 
     updateUserInfo , 
     updateUserPassword,
@@ -26,14 +29,15 @@ export{
     getUserMeunNav,
     createMeunNav,
     updateMeunNav,
-    getUserRole,
-    createUserRole,
-    updateUserRole,
+    getRole,
+    createRole,
+    updateRole,
 
 
     createUser,
     userLogin,
     getUserInfo,
+    getUserInfoRole,
     getUserList,
     updateUserInfo,
     updateUserPassword,

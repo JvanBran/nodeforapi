@@ -1,5 +1,5 @@
 const router = require('koa-router')();
-import { createUser,userLogin,getUserInfo,getUserList,updateUserInfo,updateUserPassword } from '../../app/controller'
+import { createUser,userLogin,getUserInfo,getUserInfoRole,getUserList,updateUserInfo,updateUserPassword } from '../../app/controller'
 const datalize = require('datalize');
 const field = datalize.field;
 router
@@ -21,7 +21,12 @@ router
     let reqBody = Object.assign(ctx.request.body,{'login_ip':ctx.request.ip});
     ctx.body = await userLogin(reqBody);
 })
-// 获取用户信息（包含权限信息）
+// 获取用户权限
+.get('/userInfoRole',async (ctx, next) => {
+    let reqBody = Object.assign(ctx.request.body,{"id":ctx.params.id?ctx.params.id:ctx.state.JwtToken._id,"user_type":ctx.state.JwtToken.user_type,"user_role":ctx.state.JwtToken.user_role});
+    ctx.body = await getUserInfoRole(reqBody);
+})
+// 获取用户信息
 .get('/userInfo/:id',async (ctx, next) => {
     let reqBody = Object.assign(ctx.request.body,{"id":ctx.params.id?ctx.params.id:ctx.state.JwtToken._id});
     ctx.body = await getUserInfo(reqBody);

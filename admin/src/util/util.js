@@ -51,9 +51,13 @@ const generator = (routerMap) => {
   return routerMap.map(item => {
     const { title,show,hiddenHeaderContent,icon,target } = item || {}
     const currentRouter = {
+      // 路由名称，建议唯一
       name: item.name,
+      // 如果路由path
       path: item.path,
+      // 该路由对应页面的 组件
       component: (constantRouterMap[item.component]),
+      // meta: 页面标题, 菜单图标, 页面权限(供指令权限用，可去掉)
       meta: {
           title: title,
           icon: icon || undefined,

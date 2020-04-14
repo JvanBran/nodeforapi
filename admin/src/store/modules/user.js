@@ -1,4 +1,4 @@
-import { login,getInfo } from '@/api'
+import { login,userInfoRole } from '@/api'
 
 const state = {
     token: '1211212',
@@ -6,7 +6,6 @@ const state = {
     email:'',
     userId:'',
     mobile:'',
-    roles: [],
     welcome: '',
     avatar: '',
     info: {}
@@ -19,7 +18,6 @@ const getters = {
     email: state => state.email,
     userId: state => state.userId,
     mobile: state => state.mobile,
-    roles: state => state.roles,
     token: state => state.token
 }
 
@@ -40,8 +38,8 @@ const actions = {
     //获取用户权限信息
     async GetInfo ({ commit }) {
         try {
-            const Info = await getInfo()
-            commit('SET_ROLES',[1,2,3])
+            const Info = await userInfoRole()
+            commit('SET_ROLES',Info)
             return Info
         } catch (err) {
             return err
@@ -58,9 +56,7 @@ const mutations = {
     SET_AVATAR: (state, avatar) => {
         state.avatar = avatar
     },
-    SET_ROLES: (state, roles) => {
-        state.roles = roles
-    },
+    
     SET_INFO: (state, info) => {
         state.info = info
     },

@@ -32,7 +32,10 @@ let systemPageRoleSchema = new Schema({
         type:Boolean,
         default:false
     }, //是否在列表显示
-    target:String, //打开方式
+    target:{
+        type:Boolean,
+        default:false
+    }, //打开方式
 	createTime:{    //创建时间
         type: Date,
         dafault: Date.now()

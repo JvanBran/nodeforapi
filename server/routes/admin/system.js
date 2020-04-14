@@ -5,9 +5,9 @@ import {
   updateMeunNav, 
 
   getUserMeunNav,
-  getUserRole,
-  createUserRole,
-  updateUserRole
+  getRole,
+  createRole,
+  updateRole
 } from '../../app/controller'
 const datalize = require('datalize');
 const field = datalize.field;
@@ -44,13 +44,13 @@ router
 })
 // 获取用户菜单（根据角色）
 .get('/usermeunlist',async(ctx,next)=>{
-  let reqBody = ctx.request.body;
+  let reqBody = Object.assign(ctx.request.body,{"id":ctx.params.id?ctx.params.id:ctx.state.JwtToken._id,"user_type":ctx.state.JwtToken.user_type,"user_role":ctx.state.JwtToken.user_role});
   ctx.body = await getUserMeunNav(reqBody);
 })
 // 获取所有角色
 .get('/userrole',async(ctx,next)=>{
   let reqBody = ctx.request.body;
-  ctx.body = await getUserRole(reqBody);
+  ctx.body = await getRole(reqBody);
 })
 // 创建角色
 .post('/userrole',datalize([
@@ -60,11 +60,11 @@ router
   field('creatorId').required(), //创建用户
 ]),async(ctx,next)=>{
   let reqBody = ctx.request.body;
-  ctx.body = await createUserRole(reqBody);
+  ctx.body = await createRole(reqBody);
 })
 // 修改角色
 .patch('/userrole',async(ctx,next)=>{
   let reqBody = ctx.request.body;
-  ctx.body = await updateUserRole(reqBody);
+  ctx.body = await updateRole(reqBody);
 })
 module.exports = router

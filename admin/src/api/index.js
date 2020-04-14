@@ -1,8 +1,8 @@
-import { login,getInfo,getCurrentUserNav } from './login'
+import { login,userInfoRole,getCurrentUserNav } from './login'
 import { getMeunNav,creatMeunNav } from './meunnav'
 export{
     login,
-    getInfo,
+    userInfoRole,
     getCurrentUserNav,
 
     getMeunNav,
