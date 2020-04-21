@@ -19,7 +19,7 @@ const rootRouter = {
     component: 'BasicLayout',
     redirect: '/system',
     meta: {
-      title: '首页'
+        title: '首页'
     },
     children: []
   }

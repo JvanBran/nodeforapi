@@ -33,6 +33,7 @@
                 orgTree:[],
                 meunList:[],
                 dataType:{
+                  _id:'',
                   parent_id:'', //父级id
                   title:'', //栏目标题
                   path:'', //栏目路由路径
@@ -47,6 +48,7 @@
                   isShow:'', //是否显示    前端则是删除
                   show:'', //是否在列表上显示
                   target:'', //打开方式
+                  buttonpermissionList:'', //界面按钮
                 }
             }
         },
@@ -72,9 +74,10 @@
                 let self = this;
                 self.meunList.map(item=>{
                   if(item._id == e.key){
-                    self.$refs.modal.edit(self.filterObj(item))
+                     self.$refs.modal.edit(self.filterObj(item),'edit')
                   }
                 })
+
             },
             handleAdd (item,k,p) {
                 console.log('handleAdd:', item,k,p);
@@ -82,24 +85,23 @@
             filterObj(obj){
               let objFilcter = {};
               Object.keys(this.dataType).map(item=>{
-                objFilcter[item] = obj[item]
+                  objFilcter[item]= obj[item]
               })
               return objFilcter
             },
             handEdit(item){
               switch(item.key){
                 case 'edit':
-                  this.$refs.modal.edit(this.filterObj(item))
+                  this.$refs.modal.edit(this.filterObj(item),'edit')
                 break;
                 case 'add':
-                  console.log(this.filterObj(item))
-                  console.log(item.key)
+                  this.$refs.modal.add(item._id)
                 break;
                 case 'remove':
-                  console.log(item.key)
+                  // this.$refs.modal.edit(this.filterObj(item),'remove')
                 break;
                 default:
-                  console.log(item)
+                  
               }
             },
             handleSaveOk(){},

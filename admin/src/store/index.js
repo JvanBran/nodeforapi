@@ -16,7 +16,7 @@ export default new Vuex.Store({
     permission
   },
   plugins: [createPersistedState({
-    storage: window.localStorage,
+    storage: window.sessionStorage,
     key:'admin',
     reducer(val){
       return {

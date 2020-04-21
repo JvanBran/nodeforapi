@@ -41,7 +41,8 @@ module.exports = {
             if(list && list.length > 0) {
                 let updateObj = systemPageRole.ObjKeys(reqBody)
                 delete updateObj._id
-                await systemPageRole.update({_id:reqBody._id},updateObj)
+                let status = await systemPageRole.update({_id:reqBody._id},updateObj)
+                console.log('status: ', status);
                 let list = await systemPageRole.find({_id:reqBody._id})
                 respon = resdata('0000', '更新成功',systemPageRole.ArrKeys(list));
             }else{
@@ -59,7 +60,6 @@ module.exports = {
             let respon = {};
             //TODO 假设都是管理员 
             let pageList = await systemPageRole.find()
-            console.log('pageList: ', pageList);
             respon = resdata('0000', '成功',systemPageRole.ArrKeys(pageList))
             return respon;
         } catch (err) {

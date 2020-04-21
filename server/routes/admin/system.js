@@ -25,12 +25,7 @@ router
   field('path').required(), //路由路径
   field('name').required(), //栏目路由名
   field('component').required(), //栏目文件地址 模版或者页面import
-  field('icon').required(), //栏目图标 只有组标题才显示
-  field('keepAlive').required(),//是否需要缓存状态
   field('permission').required(), //权限名
-  field('isShow').required(), //是否显示    前端则是删除
-  field('show').required(), //是否在列表上显示
-  field('target').required(), //打开方式
 ]),async(ctx,next)=>{
   let reqBody = ctx.request.body;
   ctx.body = await createMeunNav(reqBody);

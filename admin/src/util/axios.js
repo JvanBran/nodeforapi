@@ -13,6 +13,7 @@ axios.defaults.headers["pragma"] = "no-cache";
 
 //请求添加token
 axios.interceptors.request.use(request => {
+  console.log(request)
   request.headers.Authorization = store.state.user.token ? "Bearer " +encodeURI(store.state.user.token) : ""; // 已将userId保存在store中
   return request;
 })
@@ -95,4 +96,8 @@ export function post(url, data, otherConfig) {
 export function get(url, data, otherConfig) {
   console.log('url: ', url);
   return axios.get(url, { params: data, ...otherConfig });
+}
+export function patch(url, data, otherConfig) {
+  console.log('url: ', url);
+  return axios.patch(url, data, otherConfig);
 }

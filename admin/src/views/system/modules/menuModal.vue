@@ -14,7 +14,7 @@
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             >
-                <a-input v-decorator="['parent_id', {}]" disabled />
+                <a-input v-decorator="['parent_id', {initialValue:mdl.parent_id}]" disabled />
             </a-form-item>
 
             <a-form-item
@@ -22,84 +22,91 @@
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             >
-                <a-input v-decorator="['title', {}]" />
+                <a-input v-decorator="['title', {rules: [{ required: true, message: '请输入路由标签名' }],initialValue:mdl.title}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="name"
             >
-                <a-input v-decorator="['name', {}]" />
+                <a-input v-decorator="['name', {rules: [{ required: true, message: '请输入路由名' }],initialValue:mdl.name}]" />
+            </a-form-item>
+            <a-form-item
+            :labelCol="labelCol"
+            :wrapperCol="wrapperCol"
+            label="path"
+            >
+                <a-input v-decorator="['path', {rules: [{ required: true, message: '请输入路由path' }],initialValue:mdl.name}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="component"
             >
-                <a-input v-decorator="['component', {}]" />
+                <a-input v-decorator="['component', {rules: [{ required: true, message: '请输入组件名' }],initialValue:mdl.component}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="redirect"
             >
-                <a-input v-decorator="['redirect', {}]" />
+                <a-input v-decorator="['redirect', {initialValue:mdl.redirect}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="icon"
             >
-                <a-input v-decorator="['icon', {}]" />
+                <a-input v-decorator="['icon', {initialValue:mdl.icon}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="keepAlive"
             >
-                <a-switch v-decorator="['keepAlive', { valuePropName: 'checked' ,initialValue:true}]" />
+                <a-switch v-decorator="['keepAlive', { valuePropName: 'checked' ,initialValue:mdl.keepAlive}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="hideChildren"
             >   
-                <a-switch v-decorator="['hideChildren', { valuePropName: 'checked' ,initialValue:true}]" />
+                <a-switch v-decorator="['hideChildren', { valuePropName: 'checked' ,initialValue:mdl.hideChildren}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="permission"
             >
-                <a-input v-decorator="['permission', {}]" />
+                <a-input v-decorator="['permission', {rules: [{ required: true, message: '请输入路由权限名' }],initialValue:mdl.permission}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="hideHeader"
             >
-                <a-switch v-decorator="['hideHeader', { valuePropName: 'checked' ,initialValue:true}]" />
+                <a-switch v-decorator="['hideHeader', { valuePropName: 'checked' ,initialValue:mdl.hideHeader}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="isShow"
             >   
-                <a-switch v-decorator="['isShow', { valuePropName: 'checked' ,initialValue:true}]" />
+                <a-switch v-decorator="['isShow', { valuePropName: 'checked' ,initialValue:mdl.isShow}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="show"
             >
-                <a-switch v-decorator="['show', { valuePropName: 'checked' ,initialValue:true}]" />
+                <a-switch v-decorator="['show', { valuePropName: 'checked' ,initialValue:mdl.show}]" />
             </a-form-item>
             <a-form-item
             :labelCol="labelCol"
             :wrapperCol="wrapperCol"
             label="target"
             >
-                <a-switch v-decorator="['target', { valuePropName: 'checked' ,initialValue:true}]" />
+                <a-switch v-decorator="['target', { valuePropName: 'checked' ,initialValue:mdl.target}]" />
             </a-form-item>
         </a-form>
     </a-spin>
@@ -107,6 +114,7 @@
 </template>
 
 <script>
+    import {editMeunNav,creatMeunNav} from '@/api'
     export default {
         data(){
             return{
@@ -120,7 +128,8 @@
                 },
                 visible: false,
                 confirmLoading: false,
-                mdl: {}
+                mdl: {},
+                postType:''
             }
         },
         beforeCreate () {
@@ -128,28 +137,33 @@
         },
         methods: {
             add (id) {
-                this.edit({ parent_id: id })
+                this.edit({ parent_id: id },'add')
             },
-            edit (record) {
+            edit (record,type) {
+                this.postType = type;
                 this.mdl = Object.assign({}, record)
-                console.log('this.mdl: ', this.mdl);
-
+                this.form.resetFields()
                 this.visible = true
-                this.$nextTick(() => {
-                    this.form.setFieldsValue({ ...record })
-                })
             },
             close () {
                 this.$emit('close')
                 this.visible = false
             },
             handleOk() {
-                this.visible = false
                 // 触发表单验证
-                this.form.validateFields((err, values) => {
-                    console.log(values)
+                this.form.validateFields(async (err, values) => {
                     if(!err){
-                        console.log(values)
+                        switch (this.postType) {
+                            case 'edit':
+                                await editMeunNav(Object.assign({'_id':this.mdl._id},values))
+                                break;
+                            case 'add':
+                                await creatMeunNav(Object.assign({'_id':this.mdl._id},values))
+                                break;
+                            default:
+                                break;
+                        }
+                        this.visible = false
                     }
                 })
             },
