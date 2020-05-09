@@ -30,20 +30,24 @@ module.exports = {
             let userList = await customerInf.find(customerInf.ObjKeys(reqBody));
             let respon = {};
             if(list && list.length > 0) {
-                let customerInfInfo = await customerInf.find({"customer_id":list[0]._id});
-                const token = jwt.sign({
-                    _id: userList[0].customer_id,
-                    user_type: userList[0].user_type,
-                    user_role: userList[0].user_role,
-                }, jwt_token, { expiresIn: '240h' });
-                const customerLoginLogInfo = await customerLoginLog.create(Object.assign({"login_type":1,"customer_id":list[0]._id},reqBody))
-                respon = resdata('0000', '登录成功',Object.assign({
-                    'token':token,
-                    'userInfo':Object.assign(customerInf.ArrKeys(customerInfInfo)[0],{
-                        "login_ip":customerLoginLogInfo.login_ip?customerLoginLogInfo.login_ip:reqBody.id,
-                    })
-                }))
                 
+                let customerInfInfo = await customerInf.find({"customer_id":list[0]._id});
+                if(customerInfInfo[0].user_type !=0){
+                    const token = jwt.sign({
+                        _id: userList[0].customer_id,
+                        user_type: userList[0].user_type,
+                        user_role: userList[0].user_role,
+                    }, jwt_token, { expiresIn: '240h' });
+                    const customerLoginLogInfo = await customerLoginLog.create(Object.assign({"login_type":1,"customer_id":list[0]._id},reqBody))
+                    respon = resdata('0000', '登录成功',Object.assign({
+                        'token':token,
+                        'userInfo':Object.assign(customerInf.ArrKeys(customerInfInfo)[0],{
+                            "login_ip":customerLoginLogInfo.login_ip?customerLoginLogInfo.login_ip:reqBody.id,
+                        })
+                    }))
+                }else{
+                    respon = resdata('9995', '用户不是管理员', {});
+                }                
             } else if (userList && userList.length > 0){
                 respon = resdata('9995', '密码错误', {});
             }else {
