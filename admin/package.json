@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "apidoc": "node_modules/.bin/apidoc -i ./src/api -o ./public/apidoc",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "ant-design-vue": "^1.4.12",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "swiper": "4.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
     "vuex": "^3.1.2",
@@ -20,6 +22,7 @@
     "@vue/cli-plugin-babel": "^4.2.0",
     "@vue/cli-plugin-eslint": "^4.2.0",
     "@vue/cli-service": "^4.2.0",
+    "apidoc": "^0.22.1",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",

@@ -50,7 +50,7 @@ export default {
       )
     },
     renderItem (item) {
-      return item.children ? this.renderSubItem(item, item.key) : this.renderMenuItem(item, item.key)
+      return item.children || item.parent_id=='0' ? this.renderSubItem(item, item.key) : this.renderMenuItem(item, item.key)
     },
     renderSubItem (item, key) {
       const childrenItems = item.children && item.children.map(o => {

@@ -76,9 +76,25 @@ router
 // 修改用户地址
 .patch('/userAddr/:id',async (ctx, next) => {
     ctx.body = {
+        code:'0000',
         name:'22'
     };
 })
 // 获取用户对应页面菜单
+
+
+.get('/testimg',async (ctx, next) => {
+    ctx.body = {
+        code: "0000",
+        message: "成功",
+        result:[
+            {img:'https://img01.sogoucdn.com/app/a/07/80f2e20a98944a0fa662d3fc5f472e56',like:123,content:'尽量靠近疯狂减肥了快速的减肥开始觉得离开房间打开进风口第六十九六块腹肌都快就分开了多久分开解释道',time:'2020/05/07'},
+            {img:'https://img03.sogoucdn.com/app/a/07/f13b5c3830f02b6db698a2ae43ff6a67',like:1234,content:'尽量靠近疯狂减肥了快速的减肥开始觉得离开房间打开进风口第六十九六块腹肌都快就分开了多久分开解释道',time:'2020/05/07'},
+            {img:'https://img03.sogoucdn.com/app/a/07/b4f5a091fb5c7d40d7b74893392a705b',like:1235,content:'尽量靠近疯狂减肥了快速的减肥开始觉得离开房间打开进风口第六十九六块腹肌都快就分开了多久分开解释道',time:'2020/05/07'},
+            {img:'https://img03.sogoucdn.com/app/a/07/e58d89131f3a0882b804313208e0e983',like:1236,content:'尽量靠近疯狂减肥了快速的减肥开始觉得离开房间打开进风口第六十九六块腹肌都快就分开了多久分开解释道',time:'2020/05/07'},
+            {img:'https://img01.sogoucdn.com/app/a/07/80f2e20a98944a0fa662d3fc5f472e56',like:1237,content:'尽量靠近疯狂减肥了快速的减肥开始觉得离开房间打开进风口第六十九六块腹肌都快就分开了多久分开解释道',time:'2020/05/07'}
+        ]
+    };
+})
 
 module.exports = router;
