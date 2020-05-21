@@ -6,6 +6,6 @@ exports.connect = function(request, response) {
     let db = mongoose.connection;
     db.on('error', console.error.bind(console, 'connection error:'));
     db.once('open', function (callback) {
-      console.log('connet success!');
+      console.log('mongoose connet success!');
     });
 }
