@@ -3,6 +3,7 @@ const router = require('koa-router')();
 const publicInterface = require('./public/index')
 const appInterface = require('./app/index')
 const adminInterface = require('./admin/index')
+const testInterface = require('./test/index')
 /**
  * GET 获取资源
  * POST 创建一个新的资源
@@ -17,4 +18,7 @@ router.use('/public', publicInterface.routes(), publicInterface.allowedMethods()
 router.use('/app', appInterface.routes(), appInterface.allowedMethods());
 //  后台接口
 router.use('/admin', adminInterface.routes(), adminInterface.allowedMethods());
-module.exports = router
+
+router.use('/sqlapi', testInterface.routes(), testInterface.allowedMethods());
+
+module.exports = router;

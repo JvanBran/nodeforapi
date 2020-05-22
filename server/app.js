@@ -16,6 +16,7 @@ const datalizeVerify = require('./middleware/datalizeVerify')
 const router = require('./routes/index')
 
 const db = require('./config/dbConfig')
+const sqldb = require('./config/sqlConfig')
 const serverConfig = require('./config/serverConfig.js'); 
 
 // error handler
@@ -57,7 +58,7 @@ app.use(router.routes(), router.allowedMethods());
 
 // mongodb connect
 db.connect();
-
+sqldb.connect();
 
 // error-handling
 app.on('error', (err, ctx) => {

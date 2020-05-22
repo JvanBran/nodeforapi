@@ -13,5 +13,12 @@ module.exports = {
     },
     yunpian:{
         
+    },
+    sql:{
+        username:"root",
+        host:"47.52.246.137",
+        password:"123456",
+        database:"galaxy",
+        dialect:"mysql"
     }
 }
