@@ -1,13 +1,13 @@
 import { resdata, errdata } from '../../../utils/serve'
 import { 
-    userInfo
+    userModel
 } from '../../modal/sql'
 
 module.exports = {
     createdName: async(reqBody) =>{
         try {
             let respon = {};
-            let Info = await userInfo.create(reqBody);
+            let Info = await userModel.create(reqBody);
             respon = resdata('0000', '创建成功', Info);
             return respon;
         } catch (err) {
