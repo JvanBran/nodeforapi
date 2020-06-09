@@ -8,6 +8,7 @@ let logUtil = {};
 
 let errorLogger = log4js.getLogger('error');
 let resLogger = log4js.getLogger('response');
+let sqlLogger = log4js.getLogger('sqlponse') 
 
 //封装错误日志
 logUtil.logError = function (ctx, error, resTime) {
@@ -22,7 +23,12 @@ logUtil.logResponse = function (ctx, resTime) {
         resLogger.info(formatRes(ctx, resTime));
     }
 };
-
+//封装sql执行日志
+logUtil.logSqlponse = function(log,resTime){
+    if (log) {
+        sqlLogger.info(formatSql(log, resTime));
+    }
+}
 //格式化响应日志
 let formatRes = function (ctx, resTime) {
     let logText = new String();
@@ -99,5 +105,16 @@ let formatReqLog = function (req, resTime) {
 
     return logText;
 }
+let formatSql = function(log, resTime){
+    let logText = new String();
+    //响应日志开始
+    logText += "\n" + "*************** sql log start ***************" + "\n";
 
+    //添加请求日志
+    logText += resTime + log + "\n";
+
+    //响应日志结束
+    logText += "*************** sql log end ***************" + "\n";
+    return logText;
+}
 module.exports = logUtil;

@@ -98,20 +98,19 @@ class AuxiliaryClass{
     }
 }
 class sqlClass{
-    create(dataArr) {
+    /**
+     * 创建用户
+     * @param user
+     * @returns {Promise<boolean>}
+     */
+    async create(dataArr) {
         const self = this;
-        return new Promise(function (resolve, reject){
-            self.sequelizeModel.create(dataArr)
-            .then(res=>{
-                resolve(res)
-            })
-            .catch(err=>{
-                resolve(err)
-            })
-            
-            // user.create(dataValues)
-            //console.log(user)
-            //resolve(dataArr)
+        let {username, password, email, roles_id} = dataArr;
+        return await self.sqlModel.create({
+            username,
+            password,
+            email,
+            roles_id
         })
     }
 }

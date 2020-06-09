@@ -58,7 +58,6 @@ app.use(router.routes(), router.allowedMethods());
 
 // mongodb connect
 db.connect();
-sqldb.connect();
 
 // error-handling
 app.on('error', (err, ctx) => {

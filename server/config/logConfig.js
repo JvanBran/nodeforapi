@@ -21,6 +21,15 @@ let responseLogPath = baseLogPath + responsePath + "/" + responseFileName;
 // let responseLogPath = path.resolve(__dirname, "../logs/response/response");
 
 
+//数据库日志
+let sqlPath = "/sql";
+//响应日志文件名
+let sqlFileName = "sql";
+//响应日志输出完整路径
+let sqlLogPath = baseLogPath + sqlPath + "/" + sqlFileName;
+// let responseLogPath = path.resolve(__dirname, "../logs/sql/sql");
+
+
 module.exports = {
     "appenders":{
         error: {
@@ -38,11 +47,20 @@ module.exports = {
             "alwaysIncludePattern":true,
             "pattern": "-yyyy-MM-dd-hh.log",
             "path": responsePath,
+        },
+        sqlponse: {
+            "category":"resLogger",
+            "type": "dateFile",
+            "filename": sqlLogPath,
+            "alwaysIncludePattern":true,
+            "pattern": "-yyyy-MM-dd-hh.log",
+            "path": sqlPath,
         }
     },
     "categories" : { 
         error: { appenders: ['error'], level: 'error' },
         response: { appenders: ['response'], level: 'info' },
+        sqlponse: { appenders: ['sqlponse'], level: 'info' },
         default: { appenders: ['response'], level: 'info' },
     }
 }
