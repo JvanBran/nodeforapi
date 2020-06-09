@@ -44,8 +44,15 @@ export default {
       return (
         <Item key={item.key}>
           { this.renderIcon(item.icon,item) }
-          { item.title }
-            <a class="btn" style="width: 20px;z-index:1300" {...{ on: { click: () => {event.stopPropagation();this.handlePlus(item)} } }}><a-icon type="delete" /></a>
+          <a-dropdown>
+              <span>{ item.title } 
+                <a-icon style="margin-left:20px;" type="form" /> 
+              </span>
+              <a-menu slot="overlay" {...{ on: { click: (it) => this.dropdownPlus(item,it) } }}>
+                <a-menu-item key="edit">编辑</a-menu-item>
+                <a-menu-item key="remove">移除</a-menu-item>
+              </a-menu>
+            </a-dropdown>
         </Item>
       )
     },
